@@ -19,12 +19,14 @@ except:
 
 #path to dictionary
 accDictionaryPath = "dict/dictionary"
+
 # lists to store used user IP, MAC addresses so that it will not allocated again.
 usedIP = []
 usedMAC = []
 dict = Dictionary(accDictionaryPath)
 
 
+# Function to create a random MAC.
 def randomMAC():
     while True:
         mac_digits = [ 0x00, 0x16, 0x3e, random.randint(0x00, 0x7f),
@@ -34,6 +36,7 @@ def randomMAC():
             usedMAC.append(mac)
             return mac
 
+# Function to Create Random IP.
 def randomIP(nasIP):
     while True:
         a,b,c,d = map(int, nasIP.split("."))[:4]
@@ -42,14 +45,17 @@ def randomIP(nasIP):
             usedIP.append(ip)
             return ip
 
+
 class UserError(Exception):
-    """This is used represnt any Exception occured during user authentication,
+    """
+    This is used represnt any Exception occured during user authentication,
     accounting requests.
     """
     def __init__(self, value):
         self.value = value
     def __str__(self):
         return repr(self.value)    
+
 
 class RadiusUser(threading.Thread):
     """
@@ -67,8 +73,12 @@ class RadiusUser(threading.Thread):
         self.goGoTailNumber = goGoTailNumber
         self.userID = userID
         self.initiated = False
+
+    def log(self, lvl, msg, *args, **kwargs):
+        if self.debugEnabled:
+            self.logger.log(lvl, msg, *args, **kwargs)
         
-    def initiate(self, username, password, duration, acctUpdateInterval, abruptlyEnd, stats):
+    def initiate(self, username, password, duration, acctUpdateInterval, abruptlyEnd, stats, debugEnabled):
         global dict
 	self.username = username
         self.password = password
@@ -76,32 +86,35 @@ class RadiusUser(threading.Thread):
         self.abruptlyEnd = abruptlyEnd
         self.acctUpdateInterval = acctUpdateInterval
         self.stats = stats
+        self.debugEnabled = debugEnabled
 
         # create a framed IP and MAC adress for user.
         self.framedIP = randomIP(self.nasIP)
         self.userMacAddr = randomMAC()
-        
-        # create a logger for this user.
-        self.logger = logging.getLogger(self.username)
-        
-        # create a formatter for writing into logging file. The format is "<time>: <level>: <string>"
-        self.formatter = logging.Formatter('%(asctime)s: %(levelname)s: %(message)s')
 
-        # create a file handler for writing the log info to the file.
-        date_str = datetime.datetime.now().strftime("%Y%m%d%H%M")
-        self.handle = logging.FileHandler("logs/"+username+"-"+date_str+".log")
-        self.handle.setFormatter(self.formatter)
-        self.logger.addHandler(self.handle)
-        self.logger.setLevel(logging.DEBUG)
+        # If Logging is enabled create a logger for the user and associate handle.
+        if self.debugEnabled:
+            # create a logger for this user.
+            self.logger = logging.getLogger(self.username)
+        
+            # create a formatter for writing into logging file. The format is "<time>: <level>: <string>"
+            self.formatter = logging.Formatter('%(asctime)s: %(levelname)s: %(message)s')
+
+            # create a file handler for writing the log info to the file.
+            date_str = datetime.datetime.now().strftime("%Y%m%d%H%M")
+            self.handle = logging.FileHandler("logs/"+username+"-"+date_str+".log")
+            self.handle.setFormatter(self.formatter)
+            self.logger.addHandler(self.handle)
+            self.logger.setLevel(logging.DEBUG)
 
         # write the information into log file. 
-        self.logger.debug("Starting the client for the user %s to the server %s\n", self.username, self.server)
-        self.logger.debug("DURATION of the TEST: %d", self.duration)
-        self.logger.debug("NAS-IP: %s", self.nasIP)
-        self.logger.debug("NAS-MAC-ADDR: %s", self.nasMacAddr) 
-        self.logger.debug("Abruptly End: %s", self.abruptlyEnd)
-        self.logger.debug("Framed-IP: %s", self.framedIP)
-        self.logger.debug("User-MAC-Addr: %s", self.userMacAddr)
+        self.log(logging.DEBUG, "Starting the client for the user %s to the server %s\n", self.username, self.server)
+        self.log(logging.DEBUG, "DURATION of the TEST: %d", self.duration)
+        self.log(logging.DEBUG, "NAS-IP: %s", self.nasIP)
+        self.log(logging.DEBUG, "NAS-MAC-ADDR: %s", self.nasMacAddr) 
+        self.log(logging.DEBUG, "Abruptly End: %s", self.abruptlyEnd)
+        self.log(logging.DEBUG, "Framed-IP: %s", self.framedIP)
+        self.log(logging.DEBUG, "User-MAC-Addr: %s", self.userMacAddr)
         
         # create a connection to the server
         self.srv = Client(server=self.server, secret=self.secret,
@@ -114,35 +127,33 @@ class RadiusUser(threading.Thread):
         try:
             self.stats.incr_user_created()
             try:
-                self.logger.debug("\n")
+                self.log(logging.DEBUG, "\n")
                 # send Authentication Request with Service Type 8 
                 if not self.authRequest(service_type=8):
                     # The request is not Accept so log the event and exit.
                     print "Auth Failed Service Type: 8 for user", self.username
-                    self.logger.error("AUTH Failed for Service type 8, Ending the test for this user")
+                    self.log(logging.ERROR, "AUTH Failed for Service type 8, Ending the test for this user")
                     raise Exception
                 # send Authentication Request with Service Type 1
                 if not self.authRequest(service_type=1):
                     # The request is not Accept so log the event and exit.
                     print "Auth Failed, Service Type: 1 for user", self.username
-                    self.logger.error("AUTH Failed for Service Type 1, Ending the test for this user")
+                    self.log(logging.ERROR, "AUTH Failed for Service Type 1, Ending the test for this user")
                     raise Exception
             except Exception as e:
                 # there is some network error. So log it and return.
                 print e, self.username
-                self.logger.error("Network error, Reason: %s", str(e))
-                self.logger.error("Ending the test for this user")
+                self.log(logging.ERROR, "Network error, Reason: %s", str(e))
                 raise Exception
             
             try:
-                self.logger.debug("\n")
+                self.log(logging.DEBUG, "\n")
                 # Send Accounting Start Request.
                 self.acctStartRequest()
             except Exception as e:
                 # If there is any error like Network Error log the Error and exit.
                 print e, self.username
-                self.logger.error("Network error, Reason: %s", str(e))
-                self.logger.error("Ending the test for this user")
+                self.log(logging.ERROR, "Network error, Reason: %s", str(e))
                 raise Exception
 
             # While the Duration is greater than 20 seconds sleep send some Interim Accountings
@@ -157,18 +168,18 @@ class RadiusUser(threading.Thread):
                     time_to_sleep = self.duration
                 time.sleep(time_to_sleep)
                 try:
-                    self.logger.debug("\n")
+                    self.log(logging.DEBUG, "\n")
                     # Send Accounting Interim
                     self.acctUpdateRequest()
                 except Exception as e:
                     # If there is any error like Network Error log the Error.
                     # Here we don't end the session as this is just a update.
                     print e, self.username
-                    self.logger.error("Network error, Reason: %s", str(e))
+                    self.log(logging.ERROR, "Network error, Reason: %s", str(e))
 
                 # If the user has Abruptly end flag set then end the test for this user if we choose True.
                 if random.choice([True,False]) and self.abruptlyEnd:
-                    self.logger.debug("User has abruptly end flag so ending the test with out AcctStop")
+                    self.log(logging.DEBUG, "User has abruptly end flag so ending the test with out AcctStop")
                     raise Exception
                 # Subtract the time we spent from the duration of user.
                 end = datetime.datetime.now()
@@ -178,26 +189,27 @@ class RadiusUser(threading.Thread):
             time.sleep(random.randint(10,30))
             # If the Abruptly end flag set then end the test for this user
             if self.abruptlyEnd:
-                self.logger.debug("User has abruptly end flag so ending the test with out AcctStop")
+                self.log(logging.DEBUG, "User has abruptly end flag so ending the test with out AcctStop")
                 raise Exception
             
             try:
-                self.logger.debug("\n")
+                self.log(logging.DEBUG, "\n")
                 # Send Accounting Stop
                 self.acctStopRequest()
             except Exception as e:
                 # If there is any error like Network Error log the Error and exit.
                 print e, self.username
-                self.logger.error("Network error, Reason: %s", str(e))
-                self.logger.error("Ending the test for this user")
+                self.log(logging.ERROR, "Network error, Reason: %s", str(e))
+                self.log(logging.ERROR, "Ending the test for this user")
                 raise Exception
         except:
             pass
         #Ending the test for this user.
-        self.logger.debug("Ending the test for this user")
+        self.log(logging.DEBUG, "Ending the test for this user")
         self.stats.incr_user_terminated()
-        self.handle.close()
-        del self.logger, self.formatter
+        if self.debugEnabled:
+             self.handle.close()
+             del self.logger, self.formatter
         
 
     # Function to send Authentication Request to the User.
@@ -233,10 +245,10 @@ class RadiusUser(threading.Thread):
         req['GoGo-Private-IP-Address'] = "192.168.1.179"
 
         # Logging the Authentication Request.
-        self.logger.debug("Creating Authentication Request with the following Attributes:")
+        self.log(logging.DEBUG, "Creating Authentication Request with the following Attributes:")
         for key in req.keys():
             try:
-                self.logger.debug("%s: %s", key, req[key])
+                self.log(logging.DEBUG, "%s: %s", key, req[key])
             except Exception, msg:
                 pass
 
@@ -250,16 +262,16 @@ class RadiusUser(threading.Thread):
             raise UserError("Network error: "+error[1])
 
         # Logging the Authentication Response.
-        self.logger.debug("\n")
+        self.log(logging.DEBUG, "\n")
         if resp.code == pyrad.packet.AccessAccept:
-            self.logger.debug("Received response with code: %d, Accepted", resp.code)
+            self.log(logging.DEBUG, "Received response with code: %d, Accepted", resp.code)
             self.stats.incr_access_accept_rcvd()
         else:
-            self.logger.debug("Received response with code: %d, Rejected", resp.code)
+            self.log(logging.DEBUG, "Received response with code: %d, Rejected", resp.code)
             self.stats.incr_access_reject_rcvd()
         for key in resp.keys():
             try:
-                self.logger.debug("%s: %s", key, resp[key])
+                self.log(logging.DEBUG, "%s: %s", key, resp[key])
             except:
                 pass
         
@@ -296,10 +308,10 @@ class RadiusUser(threading.Thread):
         req['GoGo-Private-IP-Address'] = "192.168.1.179"
 
         # Logging the Accounting Start Request.
-        self.logger.debug("Creating Accounting start Request with the following Attributes:")
+        self.log(logging.DEBUG, "Creating Accounting start Request with the following Attributes:")
         for key in req.keys():
             try:
-                self.logger.debug("%s: %s", key, req[key])
+                self.log(logging.DEBUG, "%s: %s", key, req[key])
             except Exception, msg:
                 pass
 
@@ -314,11 +326,11 @@ class RadiusUser(threading.Thread):
 
         self.stats.incr_accounting_response_rcvd()
         # Logging the Accounting Response.
-        self.logger.debug("\n")
-        self.logger.debug("Received response with following attributes:")
+        self.log(logging.DEBUG, "\n")
+        self.log(logging.DEBUG, "Received response with following attributes:")
         for key in resp.keys():
             try:
-                self.logger.debug("%s: %s", key, resp[key])
+                self.log(logging.DEBUG, "%s: %s", key, resp[key])
             except:
                 pass
         self.start_time = datetime.datetime.now()
@@ -388,10 +400,10 @@ class RadiusUser(threading.Thread):
         req["Acct-Input-Octets"] = input_bytes
 
         # Logging the Accounting Interim.
-        self.logger.debug("Creating Accounting Update Request with the following Attributes:")
+        self.log(logging.DEBUG, "Creating Accounting Update Request with the following Attributes:")
         for key in req.keys():
             try:
-                self.logger.debug("%s: %s", key, req[key])
+                self.log(logging.DEBUG, "%s: %s", key, req[key])
             except Exception, msg:
                 pass
 
@@ -406,11 +418,11 @@ class RadiusUser(threading.Thread):
 
         self.stats.incr_accounting_response_rcvd()
         # Logging the Accounting Response.
-        self.logger.debug("\n")
-        self.logger.debug("Received response with following attributes:")
+        self.log(logging.DEBUG, "\n")
+        self.log(logging.DEBUG, "Received response with following attributes:")
         for key in resp.keys():
             try:
-                self.logger.debug("%s: %s", key, resp[key])
+                self.log(logging.DEBUG, "%s: %s", key, resp[key])
             except:
                 pass
     # End of Interim Accounting Update Function.
@@ -481,10 +493,10 @@ class RadiusUser(threading.Thread):
         req["Acct-Input-Octets"] = input_bytes
 
         # Logging the Accounting Stop.
-        self.logger.debug("Creating Accounting Stop Request with the following Attributes:")
+        self.log(logging.DEBUG, "Creating Accounting Stop Request with the following Attributes:")
         for key in req.keys():
             try:
-                self.logger.debug("%s: %s", key, req[key])
+                self.log(logging.DEBUG, "%s: %s", key, req[key])
             except Exception, msg:
                 pass
 
@@ -499,11 +511,11 @@ class RadiusUser(threading.Thread):
 
         self.stats.incr_accounting_response_rcvd()
         # Logging the Accounting Response.
-        self.logger.debug("\n")
-        self.logger.debug("Received response with following attributes:")
+        self.log(logging.DEBUG, "\n")
+        self.log(logging.DEBUG, "Received response with following attributes:")
         for key in resp.keys():
             try:
-                self.logger.debug("%s: %s", key, resp[key])
+                self.log(logging.DEBUG, "%s: %s", key, resp[key])
             except:
                 pass
     # End of Accounting Stop Function.

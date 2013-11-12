@@ -5,17 +5,18 @@ import datetime, time
 import sys
 import threading
 
-nasip_filename = "nasip.txt"
-users_filename = "users.txt"
+nasip_filename = "nasip.txt"                 # The filename of the NAS IP addresses. 
+users_filename = "users.txt"                 # The filename of the User details.
 per_of_users_to_end_abruptly = 25            # %of the users to have the abruptly end flag.
 time_between_stats = 10
 
 
+#Find the current directory which will be used to read NAS IP file and Users file.
 filepath = sys.argv[0]
 if filepath.find("/") >=0 or filepath.find("\\")>=0:
-    if filepath.find("/") >=0:                   # for non windows systems
+    if filepath.find("/") >=0:                   # for non windows system.
         curdir = filepath[:filepath.rfind("/")]
-    else:                                        # for windows systems.
+    else:                                        # for windows system.
         curdir = filepath[:filepath.rfind("\\")]
 else:
     curdir = "."
@@ -56,6 +57,8 @@ except Exception, msg:
     print "ERROR:", msg
     sys.exit(-1)
 
+
+# Handles the statistics part of the Tool.
 class Statistics(threading.Thread):
     def __init__(self):
         threading.Thread.__init__(self, name="Statistics")
@@ -127,7 +130,7 @@ class Statistics(threading.Thread):
 
 # This class initializes the users and spans users at a rate given in the command.
 class Runner(threading.Thread):
-    def __init__(self, server, secret, no_of_users, duration, acctUpdateInterval, rate, userTs):
+    def __init__(self, server, secret, no_of_users, duration, acctUpdateInterval, rate, debugEnabled, userTs):
         threading.Thread.__init__(self, name = "Runner")
         self.server = server
         self.secret = secret
@@ -135,6 +138,7 @@ class Runner(threading.Thread):
         self.rate = rate
         self.no_of_users = no_of_users
         self.acctUpdateInterval = acctUpdateInterval
+        self.debugEnabled = debugEnabled
         self.userTs = userTs
 
     def run(self):
@@ -176,7 +180,8 @@ class Runner(threading.Thread):
                                          nas_device["TailNo"], nas_device["UserCount"])
                 self.no_of_users -= 1
                 #print user, self.no_of_users, "Runner"
-                th.initiate(user["Username"], user["Password"], duration_of_user, self.acctUpdateInterval, end_abruptly, stats)
+                th.initiate(user["Username"], user["Password"], duration_of_user, self.acctUpdateInterval,
+                            end_abruptly, stats, self.debugEnabled)
                 th.setDaemon(True)
                 th.start()
                 self.userTs.append(th)
@@ -191,23 +196,38 @@ class Runner(threading.Thread):
         
 def main():
     global users
+
+    # Create a parser to read the arguments.
     parser = argparse.ArgumentParser(description="Run a test for Radius server")
+
+    # The number of users(n), Duration(d), Radius Server(server) and Secret(secret) are mandatory.
     parser.add_argument("-n", type=int, required=True, help="Number of users to run")
     parser.add_argument("-d", type=int, required=True, help="Duration of the test")
     parser.add_argument("-server", type=str, required=True, help="Radius server")
     parser.add_argument("-secret", type=str, required=True, help="Secret for the radius server")
+
+    # The Rate(r,default=100), Interval(i) are optional. If Interval is not mentioned random seconds
+    # is choosen everytime.
     parser.add_argument("-r", type=int, default=100, help="Rate of the user creation")
     parser.add_argument("-i", type=int, default=0, help="Accounting Update Interval")
+
+    # To Logs(l) is optional to enable logs this option needs to be set.
+    parser.add_argument("-l", action='store_true')
+
+    # Parse the parameters. If the parameters are wrong this functions exits.
     cli = parser.parse_args()
+
+    # Read arguments. 
     no_of_users = cli.n
     duration = cli.d
     server = cli.server
     secret = cli.secret
     rate = cli.r
     acctUpdateInterval = cli.i
+    debugEnabled = cli.l
 
     userTs = []
-    runner = Runner(server, secret, no_of_users, duration, acctUpdateInterval, rate, userTs)
+    runner = Runner(server, secret, no_of_users, duration, acctUpdateInterval, rate, debugEnabled, userTs)
     runner.setDaemon(True)
     runner.start()
     
