@@ -1,0 +1,47 @@
+# -*- text -*-
+#
+# dictionary.gogo
+#
+# Version: $Id$
+#
+
+
+VENDOR		GoGo			28382
+
+#
+#    Standard attribute
+#
+BEGIN-VENDOR	GoGo
+
+ATTRIBUTE	GoGo-Tail-Number			1	string
+ATTRIBUTE	GoGo-Airline				2	string
+ATTRIBUTE	GoGo-Flight-Number			3	string
+ATTRIBUTE	GoGo-Departure-Airport			4	string
+ATTRIBUTE	GoGo-Arrival-Airport			5	string
+ATTRIBUTE	GoGo-Private-IP-Address			8 	ipaddr
+ATTRIBUTE   GoGo-Total-Input-Octets     		42	integer  
+ATTRIBUTE   GoGo-Total-Output-Octets			43	integer
+ATTRIBUTE   GoGo-Total-Input-Packets			47	integer
+ATTRIBUTE   GoGo-Total-Output-Packets			48	integer
+ATTRIBUTE   GoGo-Total-Input-Gigawords			52	integer
+ATTRIBUTE   GoGo-Total-Output-Gigawords			53	integer
+ATTRIBUTE   GoGo-Acct-Output-Octets-Satellite   	54	integer
+ATTRIBUTE   GoGo-Acct-Input-Octets-Satellite		55	integer
+ATTRIBUTE   GoGo-Acct-Output-Gigawords-Satellite	56	integer
+ATTRIBUTE   GoGo-Acct-Input-Gigawords-Satellite		57	integer
+ATTRIBUTE   GoGo-Acct-Input-Packets-Satellite		58	integer
+ATTRIBUTE   GoGo-Acct-Output-Packets-Satellite		59	integer
+ATTRIBUTE   GoGo-Total-Input-Voice-Octets		64	integer
+ATTRIBUTE   GoGo-Total-Output-Voice-Octets		65	integer
+ATTRIBUTE   GoGo-Total-Input-Voice-Packets		68	integer
+ATTRIBUTE   GoGo-Total-Output-Voice-Packets		69	integer
+ATTRIBUTE   GoGo-Total-Input-Voice-Gigawords		72	integer
+ATTRIBUTE   GoGo-Total-Output-Voice-Gigawords		73	integer
+ATTRIBUTE   GoGo-Acct-Input-Voice-Octets		62	integer
+ATTRIBUTE   GoGo-Acct-Output-Voice-Octets		63	integer
+ATTRIBUTE   GoGo-Acct-Input-Voice-Packets		66	integer
+ATTRIBUTE   GoGo-Acct-Output-Voice-Packets		67	integer
+ATTRIBUTE   GoGo-Acct-Input-Voice-Gigawords		70	integer
+ATTRIBUTE   GoGo-Acct-Output-Voice-Gigawords		71	integer
+
+END-VENDOR	GoGo

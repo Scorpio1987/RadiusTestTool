@@ -1,0 +1,455 @@
+# -*- text -*-
+#
+# Redback dictionary.
+#
+# Version:	1.00  14-Sep-2000  Chris Adams <cmadams@hiwaay.net>
+#		$Id$
+#
+
+VENDOR		Redback				2352
+
+#
+#	Redback Vendor Specific Extensions
+#
+#	The first set here uses '_' as the separator, as Redback has changed
+#	their documentation to use '-' vs. '_'.  The older '_' style entries
+#	are listed first so that they will still be accepted,
+#	yet not preferred.
+#
+#
+#	Redback Vendor Specific Extensions  ( older style syntax )
+#
+#	The names use underscores (_) instead of dashes (-), because
+#	that's what Redback used in their older documentation and examples.
+#
+BEGIN-VENDOR	Redback
+
+
+ATTRIBUTE       RB-Client-DNS-Primary         		   1    ipaddr
+ATTRIBUTE       RB-Client-DNS-Secondary                    2    ipaddr
+ATTRIBUTE       RB-DHCP-Max-Leases                         3    integer 
+ATTRIBUTE       RB-Context-Name                            4    string
+ATTRIBUTE       RB-Bridge-Group                            5    string
+ATTRIBUTE       RB-BG-Aging-Time                           6    string
+ATTRIBUTE       RB-BG-Path-Cost                            7    string
+ATTRIBUTE       RB-BG-Span-Dis                             8    string
+ATTRIBUTE       RB-BG-Trans-BPDU                           9    string
+ATTRIBUTE       RB-Rate-Limit-Rate                         10   integer
+ATTRIBUTE       RB-Rate-Limit-Burst                        11   integer
+ATTRIBUTE       RB-Police-Rate                             12   integer
+ATTRIBUTE       RB-Police-Burst                            13   integer
+ATTRIBUTE       RB-Source-Validation                       14   integer
+VALUE 		RB-Source-Validation	Enabled		1
+VALUE 		RB-Source-Validation	Disabled	2
+
+ATTRIBUTE       RB-Tunnel-Domain                           15   tagged-integer
+VALUE 		RB-Tunnel-Domain	Enabled		1
+VALUE 		RB-Tunnel-Domain	Disabled	2
+
+ATTRIBUTE       RB-Tunnel-Local-Name                       16	tagged-string
+ATTRIBUTE       RB-Tunnel-Remote-Name                      17	tagged-string
+ATTRIBUTE       RB-Tunnel-Function                         18   tagged-integer
+VALUE           RB-Tunnel-Function         LAC-Only                1
+VALUE           RB-Tunnel-Function         LNS-Only                2
+VALUE           RB-Tunnel-Function         LAC-LNS                 3
+
+ATTRIBUTE       RB-Tunnel-Flow-Control                     19   tagged-integer
+ATTRIBUTE       RB-Tunnel-Static                           20   tagged-integer
+ATTRIBUTE       RB-Tunnel-Max-Sessions                     21   tagged-integer
+ATTRIBUTE       RB-Tunnel-Max-Tunnels                      22   tagged-integer
+ATTRIBUTE       RB-Tunnel-Session-Auth                     23   tagged-integer
+VALUE        RB-Tunnel-Session-Auth        CHAP                    1
+VALUE        RB-Tunnel-Session-Auth        PAP                     2
+VALUE        RB-Tunnel-Session-Auth        CHAP-PAP                3
+
+ATTRIBUTE       RB-Tunnel-Window                           24   tagged-integer
+ATTRIBUTE       RB-Tunnel-Retransmit                       25   tagged-integer
+ATTRIBUTE       RB-Tunnel-Cmd-Timeout                      26   tagged-integer
+ATTRIBUTE       RB-PPPoE-URL                               27	string
+ATTRIBUTE       RB-PPPoE-MOTM                              28	string
+ATTRIBUTE       RB-Tunnel-Group                            29   tagged-integer
+VALUE	RB-Tunnel-Group            Enabled	                   1
+VALUE	RB-Tunnel-Group            Disabled	                   2
+
+ATTRIBUTE       RB-Tunnel-Context                          30 	tagged-string
+ATTRIBUTE       RB-Tunnel-Algorithm                        31 	tagged-integer
+VALUE 	RB-Tunnel-Algorithm	   First   		           1
+VALUE 	RB-Tunnel-Algorithm	   Load-Balance	                   2
+VALUE 	RB-Tunnel-Algorithm	   Weighted-Round-Robin	           3
+
+ATTRIBUTE       RB-Tunnel-Deadtime                         32   tagged-integer
+ATTRIBUTE       RB-Mcast-Send                              33   integer
+VALUE   RB-Mcast-Send              NO-SEND                         1
+VALUE   RB-Mcast-Send              SEND                            2
+VALUE   RB-Mcast-Send              UNSOLICITED-SEND                3
+
+ATTRIBUTE       RB-Mcast-Receive                           34   integer
+VALUE   RB-Mcast-Receive           NO-RECEIVE                      1
+VALUE   RB-Mcast-Receive           RECEIVE                         2
+
+ATTRIBUTE       RB-Mcast-MaxGroups                         35   integer
+ATTRIBUTE       RB-IP-Address-Pool-Name                    36	string
+ATTRIBUTE       RB-Tunnel-DNIS                             37   tagged-integer
+VALUE   RB-Tunnel-DNIS             DNIS                            1
+VALUE   RB-Tunnel-DNIS             DNIS-Only                       2
+
+ATTRIBUTE       RB-Medium-Type                             38   integer
+VALUE	RB-Medium-Type		   DSL	                           11
+VALUE	RB-Medium-Type		   Cable		           12
+VALUE	RB-Medium-Type		   Wireless	                   13
+VALUE	RB-Medium-Type		   Satellite	                   14
+
+ATTRIBUTE       RB-PVC-Encapsulation-Type                  39   integer
+VALUE   RB-PVC-Encapsulation-Type  AAA-ENCAPS-ATM-RAW              1
+VALUE   RB-PVC-Encapsulation-Type  AAA-ENCAPS-ATM-ROUTE1483        2
+VALUE   RB-PVC-Encapsulation-Type  AAA-ENCAPS-ATM-AUTO1483         3
+VALUE   RB-PVC-Encapsulation-Type  AAA-ENCAPS-ATM-MULTI            4
+VALUE   RB-PVC-Encapsulation-Type  AAA-ENCAPS-ATM-BRIDGE1483       5
+VALUE   RB-PVC-Encapsulation-Type  AAA-ENCAPS-ATM-PPP              6
+VALUE   RB-PVC-Encapsulation-Type  AAA-ENCAPS-ATM-PPP-SERIAL       7
+VALUE   RB-PVC-Encapsulation-Type  AAA-ENCAPS-ATM-PPP-NLPID        8
+VALUE   RB-PVC-Encapsulation-Type  AAA-ENCAPS-ATM-PPP-AUTO         9
+VALUE   RB-PVC-Encapsulation-Type  AAA-ENCAPS-ATM-PPPOE            10
+VALUE   RB-PVC-Encapsulation-Type  AAA-ENCAPS-ATM-L2TP             11
+VALUE   RB-PVC-Encapsulation-Type  AAA-ENCAPS-ATM-PPP-LLC          12
+VALUE   RB-PVC-Encapsulation-Type  AAA-ENCAPS-FRAME-AUTO1490       13
+VALUE   RB-PVC-Encapsulation-Type  AAA-ENCAPS-FRAME-MULTI          14
+VALUE   RB-PVC-Encapsulation-Type  AAA-ENCAPS-FRAME-BRIDGE1490     15
+VALUE   RB-PVC-Encapsulation-Type  AAA-ENCAPS-FRAME-PPP            16
+VALUE   RB-PVC-Encapsulation-Type  AAA-ENCAPS-FRAME-PPP-AUTO       17
+VALUE   RB-PVC-Encapsulation-Type  AAA-ENCAPS-FRAME-PPPOE          18
+VALUE   RB-PVC-Encapsulation-Type  AAA-ENCAPS-FRAME-ROUTE1490      19
+VALUE   RB-PVC-Encapsulation-Type  AAA-ENCAPS-FRAME-L2TP           20
+VALUE   RB-PVC-Encapsulation-Type  AAA-ENCAPS-L2TP-VC-MUXED        21
+VALUE   RB-PVC-Encapsulation-Type  AAA-ENCAPS-ETH                  22
+VALUE   RB-PVC-Encapsulation-Type  AAA-ENCAPS-ETH-PPPOE            23
+VALUE   RB-PVC-Encapsulation-Type  AAA-ENCAPS-ETH-MULTI            24
+VALUE   RB-PVC-Encapsulation-Type  AAA-ENCAPS-ETH-VLAN-PPPOE       26
+VALUE   RB-PVC-Encapsulation-Type  AAA-ENCAPS-ETH-VLAN-TUNNEL      30
+VALUE   RB-PVC-Encapsulation-Type  AAA-ENCAPS-ETH-VLAN-TUNNEL-PPPOE 31
+VALUE   RB-PVC-Encapsulation-Type  AAA-ENCAPS-ETH-VLAN-MULTI        32
+VALUE   RB-PVC-Encapsulation-Type  AAA-ENCAPS-ETH-VLAN-TUNNEL-MULTI 33
+
+ATTRIBUTE       RB-PVC-Profile-Name                        40   string
+ATTRIBUTE       RB-PVC-Circuit-Padding                     41   integer
+VALUE   RB-PVC-Circuit-Padding     AAA-CIRCUIT-PADDING             1
+VALUE   RB-PVC-Circuit-Padding     AAA-CIRCUIT-NO-PADDING          2
+
+ATTRIBUTE       RB-Bind-Type                               42   integer
+VALUE   RB-Bind-Type               AAA-AUTH-BIND                   1
+VALUE   RB-Bind-Type               AAA-BYPASS-BIND                 2
+VALUE   RB-Bind-Type               AAA-INTERFACE-BIND              3
+VALUE   RB-Bind-Type               AAA-SUBSCRIBE-BIND              4
+VALUE   RB-Bind-Type               AAA-TUNNEL-BIND                 5
+VALUE   RB-Bind-Type               AAA-SESSION-BIND                6
+VALUE   RB-Bind-Type               AAA-Q8021-BIND                  7
+VALUE   RB-Bind-Type               AAA-MULTI-BIND                  8
+VALUE   RB-Bind-Type               AAA-AUTO-SUBSCRIBE-BIND         14
+
+ATTRIBUTE       RB-Bind-Auth-Protocol                      43   integer
+VALUE   RB-Bind-Auth-Protocol      AAA-PPP-PAP                     1
+VALUE   RB-Bind-Auth-Protocol      AAA-PPP-CHAP                    2
+VALUE   RB-Bind-Auth-Protocol      AAA-PPP-CHAP-WAIT               3
+VALUE   RB-Bind-Auth-Protocol      AAA-PPP-CHAP-PAP                4
+VALUE   RB-Bind-Auth-Protocol      AAA-PPP-CHAP-WAIT-PAP           5
+VALUE   RB-Bind-Auth-Protocol      AAA-PPP-PAP-CHAP                6
+
+ATTRIBUTE       RB-Bind-Auth-Max-Sessions                  44   integer
+ATTRIBUTE       RB-Bind-Bypass-Bypass                      45   string
+ATTRIBUTE       RB-Bind-Auth-Context                       46   string
+ATTRIBUTE       RB-Bind-Auth-Service-Grp                   47   string
+ATTRIBUTE       RB-Bind-Bypass-Context                     48   string
+ATTRIBUTE       RB-Bind-Int-Context                        49   string
+ATTRIBUTE       RB-Bind-Tun-Context                        50   string
+ATTRIBUTE       RB-Bind-Ses-Context                        51   string
+ATTRIBUTE       RB-Bind-Dot1q-Slot                         52   integer
+ATTRIBUTE       RB-Bind-Dot1q-Port                         53   integer
+ATTRIBUTE       RB-Bind-Dot1q-Vlan-Tag-Id                  54   integer
+ATTRIBUTE       RB-Bind-Int-Interface-Name                 55   string
+ATTRIBUTE       RB-Bind-L2TP-Tunnel-Name                   56   string
+ATTRIBUTE       RB-Bind-L2TP-Flow-Control                  57   integer
+ATTRIBUTE       RB-Bind-Sub-User-At-Context                58   string
+ATTRIBUTE       RB-Bind-Sub-Password                       59   string
+ATTRIBUTE       RB-Ip-Host-Addr                            60   string
+ATTRIBUTE       RB-IP-TOS-Field                            61   integer
+VALUE   RB-IP-TOS-Field      Normal                                0
+VALUE   RB-IP-TOS-Field      Min-Cost-Only                         1
+VALUE   RB-IP-TOS-Field      Max-Realiability-Only                 2
+VALUE   RB-IP-TOS-Field      Max-Realiability-Min-Cost             3
+VALUE   RB-IP-TOS-Field      Max-Throughput-Only                   4
+VALUE   RB-IP-TOS-Field      Max-Throughput-Min-Cost               5
+VALUE   RB-IP-TOS-Field      Max-Throughput-Max-Realiability       6
+VALUE   RB-IP-TOS-Field      Max-Throughput-Max-Realiability-Min-Cost  7
+VALUE   RB-IP-TOS-Field      Min-Delay-Only                        8
+VALUE   RB-IP-TOS-Field      Min-Delay-Min-Cost                    9
+VALUE   RB-IP-TOS-Field      Min-Delay-Max-Realiability            10
+VALUE   RB-IP-TOS-Field      Min-Delay-Max-Realiability-Min-Cost   11
+VALUE   RB-IP-TOS-Field      Min-Delay-Max-Throughput              12
+VALUE   RB-IP-TOS-Field      Min-Delay-Max-Throughput-Min-Cost     13
+VALUE   RB-IP-TOS-Field      Min-Delay-Max-Throughput-Max-Realiability  14
+VALUE   RB-IP-TOS-Field      Min-Delay-Max-Throughput-Max-Realiability-Min-Cost 15
+
+ATTRIBUTE       RB-NAS-Real-Port                           62   integer
+ATTRIBUTE       RB-Tunnel-Session-Auth-Ctx                 63   tagged-string
+ATTRIBUTE       RB-Tunnel-Session-Auth-Service-Grp 	   64   tagged-string
+ATTRIBUTE       RB-Tunnel-Rate-Limit-Rate                  65   tagged-integer
+ATTRIBUTE       RB-Tunnel-Rate-Limit-Burst                 66   tagged-integer
+ATTRIBUTE       RB-Tunnel-Police-Rate                      67   tagged-integer
+ATTRIBUTE       RB-Tunnel-Police-Burst                     68   tagged-integer
+ATTRIBUTE       RB-Tunnel-L2F-Second-Password              69   tagged-string
+ATTRIBUTE       RB-ACL-Definition                          70   string
+ATTRIBUTE       RB-PPPoE-IP-Route                          71   string
+ATTRIBUTE       RB-TTY-Level-Max                           72      integer
+ATTRIBUTE       RB-TTY-Level-Start                         73      integer
+ATTRIBUTE       RB-Tunnel-Checksum                         74      integer
+VALUE	RB-Tunnel-Checksum            Enabled	                   1
+VALUE	RB-Tunnel-Checksum            Disabled	                   2
+
+ATTRIBUTE       RB-Tunnel-Profile                          75      string
+ATTRIBUTE       RB-Bind-DHCP-Context                       76      string
+ATTRIBUTE       RB-Tunnel-Mobil-Group                      77      tagged-string
+ATTRIBUTE       RB-Tunnel-Client-VPN                       78      tagged-string
+ATTRIBUTE       RB-Tunnel-Server-VPN                       79      tagged-string
+ATTRIBUTE       RB-Tunnel-Client-Rhost                     80      string
+ATTRIBUTE       RB-Tunnel-Server-Rhost                     81      string
+ATTRIBUTE       RB-Tunnel-Client-Int-Addr                  82      ipaddr
+ATTRIBUTE       RB-Tunnel-Server-Int-Addr                  83      ipaddr
+ATTRIBUTE       RB-PPP-Compression                         84      integer
+ATTRIBUTE       RB-Tunnel-Hello-Timer                      85      tagged-integer
+ATTRIBUTE       RB-Bounce-Data                             86   integer
+ATTRIBUTE       RB-Qos-Policing-Profile-Name               87   string
+ATTRIBUTE       RB-Qos-Metering-Profile-Name               88   string
+ATTRIBUTE       RB-Qos-Queuing-Profile-Name                89   string
+ATTRIBUTE       RB-IGMP-Service-Profile-Name               90   string
+ATTRIBUTE       RB-Subscriber-Profile-Name                 91   string
+ATTRIBUTE       RB-Forward-Policy                          92   string
+ATTRIBUTE       RB-Remote-Port                             93   string
+ATTRIBUTE       RB-Reauth                                  94   string
+ATTRIBUTE       RB-Reauth-More                             95   integer
+ATTRIBUTE       RB-Agent-Remote-Id                         96   string
+ATTRIBUTE       RB-Agent-Circuit-Id                        97   string
+ATTRIBUTE       RB-Platform-Type                           98   integer
+VALUE   RB-Platform-Type           SMS                             1
+VALUE   RB-Platform-Type           SE-800                          2
+VALUE   RB-Platform-Type           SE-400                          3
+VALUE   RB-Platform-Type           SE-100                          4 
+VALUE   RB-Platform-Type           SE-1200                         5 
+VALUE   RB-Platform-Type           SE-600                          6 
+
+ATTRIBUTE       RB-Client-NBNS-Primary                     99   ipaddr
+ATTRIBUTE       RB-Client-NBNS-Secondary                   100  ipaddr
+ATTRIBUTE       RB-ATM-Profile-Name                        101  string
+ATTRIBUTE       RB-Bridge-Profile-Name                     102  string
+ATTRIBUTE       RB-Mac-Address-Limit                       103  integer
+ATTRIBUTE       RB-Interface-Name                          104  string
+ATTRIBUTE       RB-NAT-Profile-Name                        105  string
+ATTRIBUTE       RB-NPM-Service-Id                          106  string
+ATTRIBUTE       RB-HTTP-Redirect-Profile-Name              107  string
+ATTRIBUTE       RB-Auto-Subscriber-Prefix                  108  string
+ATTRIBUTE       RB-Auto-Subscriber-Context                 109  string
+ATTRIBUTE       RB-Auto-Subscriber-Password                110  string
+ATTRIBUTE       RB-Circuit-Protocol-Encap                  111  integer
+ATTRIBUTE       RB-OS-Version                              112  string
+ATTRIBUTE       RB-Session-Traffic-Limit                   113  string
+ATTRIBUTE       RB-Qos-Reference                           114  string
+ATTRIBUTE       RB-Service-Category                        115  integer
+VALUE   RB-Service-Category        Constant-Bit-Rate               0
+VALUE   RB-Service-Category        Guaranteed-Frame-Rate           1 
+VALUE   RB-Service-Category        Unspecified-Bit-Rate            2 
+VALUE   RB-Service-Category        Variable-Bit-Rate-Non-Real-Time 3
+VALUE   RB-Service-Category        Variable-Bit-Rate-Real-Time     4
+
+ATTRIBUTE       RB-Peak-Cell-Rate                          116  integer
+ATTRIBUTE       RB-Cell-Delay-Variable-Tolerance           117  integer
+ATTRIBUTE       RB-Sustained-Cell-Rate                     118  integer
+ATTRIBUTE       RB-Bit-Tolerance                           119  integer
+ATTRIBUTE       RB-Minimum-Cell-Rate                       120  integer
+ATTRIBUTE       RB-Rate-Limit-Excess-Burst                 121  integer
+ATTRIBUTE       RB-Police-Excess-Burst                     122  integer
+ATTRIBUTE       RB-Tunnel-Rate-Limit-Excess-Burst          123  integer
+ATTRIBUTE       RB-Tunnel-Police-Excess-Burst              124  integer
+ATTRIBUTE       DHCP-Vendor-Class-Id                       125  string
+ATTRIBUTE       RB-Qos-Rate                                126  string
+ATTRIBUTE       DHCP-Vendor-Encap-Option                   127  string
+ATTRIBUTE       RB-Acct-Input-Octets-64                    128  integer64
+ATTRIBUTE       RB-Acct-Output-Octets-64                   129  integer64
+ATTRIBUTE       RB-Acct-Input-Packets-64                   130  integer64
+ATTRIBUTE       RB-Acct-Output-Packets-64                  131  integer64
+ATTRIBUTE       RB-Assigned-IP-Address                     132  ipaddr
+ATTRIBUTE       RB-Acct-Mcast-In-Octets-64                 133  integer64
+ATTRIBUTE       RB-Acct-Mcast-Out-Octets-64                134  integer64
+ATTRIBUTE       RB-Acct-Mcast-In-Packets-64                135  integer64
+ATTRIBUTE       RB-Acct-Mcast-Out-Packets-64               136  integer64
+ATTRIBUTE       RB-LAC-Port                                137  integer
+ATTRIBUTE       RB-LAC-Real-Port                           138  integer
+ATTRIBUTE       RB-LAC-Port-Type                           139  integer
+VALUE   RB-LAC-Port-Type           NAS-PORT-TYPE-10BT              40
+VALUE   RB-LAC-Port-Type           NAS-PORT-TYPE-100BT             41
+VALUE   RB-LAC-Port-Type           NAS-PORT-TYPE-DS3-FR            42
+VALUE   RB-LAC-Port-Type           NAS-PORT-TYPE-DS3-ATM           43
+VALUE   RB-LAC-Port-Type           NAS-PORT-TYPE-OC3               44
+VALUE   RB-LAC-Port-Type           NAS-PORT-TYPE-HSSI              45
+VALUE   RB-LAC-Port-Type           NAS-PORT-TYPE-EIA530            46
+VALUE   RB-LAC-Port-Type           NAS-PORT-TYPE-T1                47
+VALUE   RB-LAC-Port-Type           NAS-PORT-TYPE-CHAN-T3           48
+VALUE   RB-LAC-Port-Type           NAS-PORT-TYPE-DS1-FR            49
+VALUE   RB-LAC-Port-Type           NAS-PORT-TYPE-E3-ATM            50
+VALUE   RB-LAC-Port-Type           NAS-PORT-TYPE-IMA-ATM           51
+VALUE   RB-LAC-Port-Type           NAS-PORT-TYPE-DS3-ATM-2         52
+VALUE   RB-LAC-Port-Type           NAS-PORT-TYPE-OC3-ATM-2         53
+VALUE   RB-LAC-Port-Type           NAS-PORT-TYPE-1000BSX           54
+VALUE   RB-LAC-Port-Type           NAS-PORT-TYPE-E1-FR             55
+VALUE   RB-LAC-Port-Type           NAS-PORT-TYPE-E1-ATM            56
+VALUE   RB-LAC-Port-Type           NAS-PORT-TYPE-E3-FR             57
+VALUE   RB-LAC-Port-Type           NAS-PORT-TYPE-OC3-POS           58
+VALUE   RB-LAC-Port-Type           NAS-PORT-TYPE-OC12-POS          59
+VALUE   RB-LAC-Port-Type           NAS-PORT-TYPE-PPPOE             60
+
+ATTRIBUTE       RB-LAC-Real-Port-Type                      140  integer
+VALUE   RB-LAC-Real-Port-Type      NAS-PORT-TYPE-10BT              40
+VALUE   RB-LAC-Real-Port-Type      NAS-PORT-TYPE-100BT             41
+VALUE   RB-LAC-Real-Port-Type      NAS-PORT-TYPE-DS3-FR            42
+VALUE   RB-LAC-Real-Port-Type      NAS-PORT-TYPE-DS3-ATM           43
+VALUE   RB-LAC-Real-Port-Type      NAS-PORT-TYPE-OC3               44
+VALUE   RB-LAC-Real-Port-Type      NAS-PORT-TYPE-HSSI              45
+VALUE   RB-LAC-Real-Port-Type      NAS-PORT-TYPE-EIA530            46
+VALUE   RB-LAC-Real-Port-Type      NAS-PORT-TYPE-T1                47
+VALUE   RB-LAC-Real-Port-Type      NAS-PORT-TYPE-CHAN-T3           48
+VALUE   RB-LAC-Real-Port-Type      NAS-PORT-TYPE-DS1-FR            49
+VALUE   RB-LAC-Real-Port-Type      NAS-PORT-TYPE-E3-ATM            50
+VALUE   RB-LAC-Real-Port-Type      NAS-PORT-TYPE-IMA-ATM           51
+VALUE   RB-LAC-Real-Port-Type      NAS-PORT-TYPE-DS3-ATM-2         52
+VALUE   RB-LAC-Real-Port-Type      NAS-PORT-TYPE-OC3-ATM-2         53
+VALUE   RB-LAC-Real-Port-Type      NAS-PORT-TYPE-1000BSX           54
+VALUE   RB-LAC-Real-Port-Type      NAS-PORT-TYPE-E1-FR             55
+VALUE   RB-LAC-Real-Port-Type      NAS-PORT-TYPE-E1-ATM            56
+VALUE   RB-LAC-Real-Port-Type      NAS-PORT-TYPE-E3-FR             57
+VALUE   RB-LAC-Real-Port-Type      NAS-PORT-TYPE-OC3-POS           58
+VALUE   RB-LAC-Real-Port-Type      NAS-PORT-TYPE-OC12-POS          59
+VALUE   RB-LAC-Real-Port-Type      NAS-PORT-TYPE-PPPOE             60
+
+ATTRIBUTE       RB-Acct-Dyn-Ac-Ent                         141  string
+ATTRIBUTE       RB-Session-Error-Code                      142  integer
+ATTRIBUTE       RB-Session-Error-Msg                       143  string
+ATTRIBUTE       RB-Acct-Reason                             144  integer
+VALUE   RB-Acct-Reason         AAA-ACCT-SESSION-UP                 1
+VALUE   RB-Acct-Reason         AAA-ACCT-SESSION-DOWN               2
+VALUE   RB-Acct-Reason         AAA-ACCT-PERIODIC                   3
+VALUE   RB-Acct-Reason         AAA-ACCT-DYN-AC-ENT-START           4
+VALUE   RB-Acct-Reason         AAA-ACCT-DYN-AC-ENT-STOP            5
+VALUE   RB-Acct-Reason         AAA-ACCT-DYN-AC-ENT-TIMEOUT         6
+VALUE   RB-Acct-Reason         AAA-ACCT-SUBSCRIBER-REAUTH          7
+VALUE   RB-Acct-Reason         AAA-ACCT-PPP-IPCP-UP                8
+VALUE   RB-Acct-Reason         AAA-ACCT-PPP-MP-LINK-UP             9
+VALUE   RB-Acct-Reason         AAA-ACCT-DHCP-IP-ADDR-GRANTED       10
+VALUE   RB-Acct-Reason         AAA-ACCT-DHCP-IP-ADDR-RELEASED      11
+VALUE   RB-Acct-Reason         AAA-ACCT-DHCP-IP-ACL-TIMERED-ACTION 12
+VALUE   RB-Acct-Reason         AAA-ACCT-DHCP-IP-ACL-ACTION         13
+VALUE   RB-Acct-Reason         AAA-LOAD-ACCT-CMD                   14
+VALUE   RB-Acct-Reason         AAA-LOAD-ACCT-TEST                  15
+VALUE   RB-Acct-Reason         AAA-LOAD-ACCT-VOLUME-INGRESS-EXCEEDED 16
+VALUE   RB-Acct-Reason         AAA-LOAD-ACCT-VOLUME-EGRESS-EXCEEDED  17
+VALUE   RB-Acct-Reason         AAA-LOAD-ACCT-IDLE-TIMEOUT            18
+VALUE   RB-Acct-Reason         AAA-LOAD-ACCT-TIME-EXCEEDED           19
+VALUE   RB-Acct-Reason         AAA-ACCT-RC-SERVICE-UP                24
+VALUE   RB-Acct-Reason         AAA-ACCT-RC-SERVICE-DOWN              25
+VALUE   RB-Acct-Reason         AAA-ACCT-RC-SERVICE-PERIODIC          26
+VALUE   RB-Acct-Reason         AAA-LOAD-ACCT-VOLUME-AGGR-LIMIT-EXCEEDED 28
+VALUE   RB-Acct-Reason         AAA-ACCT-HOTLINE-ENABLE             31
+VALUE   RB-Acct-Reason         AAA-ACCT-HOTLINE-DISABLE            32
+VALUE   RB-Acct-Reason         AAA-ACCT-RC-SERVICE-REAUTH          33
+
+ATTRIBUTE       RB-MAC-Address                             145  string
+ATTRIBUTE       RB-Vlan-Id                                 146  string
+ATTRIBUTE       RB-Acct-Mcast-In-Octets                    147  integer
+ATTRIBUTE       RB-Acct-Mcast-Out-Octets                   148  integer
+ATTRIBUTE       RB-Acct-Mcast-In-Packets                   149  integer
+ATTRIBUTE       RB-Acct-Mcast-Out-Packets                  150  integer
+ATTRIBUTE       RB-Reauth-Session-Id                       151  string
+ATTRIBUTE       RB-Acct-Policed-Packets                    152  integer64
+ATTRIBUTE       RB-Acct-Policed-Octets                     153  integer64
+ATTRIBUTE       RB-Acct-Rate-Limited-Packets               154  integer64
+ATTRIBUTE       RB-Acct-Rate-Limited-Octets                155  integer64
+ATTRIBUTE       RB-Qos-Rate-Inbound                        156  string
+ATTRIBUTE       RB-Qos-Rate-Outbound                       157  string
+ATTRIBUTE       RB-Route-Tag                               158  integer
+#
+# By default, SEOS expects VSAs 159-163 to be salt encrypted
+#
+ATTRIBUTE       RB-LI-Identifier                           159  string encrypt=2
+ATTRIBUTE       RB-LI-Md-Address                           160  ipaddr encrypt=2
+ATTRIBUTE       RB-LI-Md-Port                              161  integer encrypt=2
+ATTRIBUTE       RB-LI-Action                               162  integer encrypt=2
+VALUE   RB-LI-Action           LI-ACTION-STOP                      0 
+VALUE   RB-LI-Action           LI-ACTION-START                     1 
+VALUE   RB-LI-Action           LI-ACTION-NO-ACTION                 2 
+
+ATTRIBUTE       RB-LI-Profile                              163  string encrypt=2
+ATTRIBUTE       RB-Dynamic-Policy-Filter                   164  string
+ATTRIBUTE       RB-HTTP-Redirect-URL                       165  string
+ATTRIBUTE       RB-DSL-Actual-Rate-Up                      166  integer
+ATTRIBUTE       RB-DSL-Actual-Rate-Down                    167  integer
+ATTRIBUTE       RB-DSL-Min-Rate-Up                         168  integer
+ATTRIBUTE       RB-DSL-Min-Rate-Down                       169  integer
+ATTRIBUTE       RB-DSL-Attainable-Rate-Up                  170  integer
+ATTRIBUTE       RB-DSL-Attainable-Rate-Down                171  integer
+ATTRIBUTE       RB-DSL-Max-Rate-Up                         172  integer
+ATTRIBUTE       RB-DSL-Max-Rate-Down                       173  integer
+ATTRIBUTE       RB-DSL-Min-Low-Power-Rate-Up               174  integer
+ATTRIBUTE       RB-DSL-Min-Low-Power-Rate-Down             175  integer
+ATTRIBUTE       RB-DSL-Max-Inter-Delay-Up                  176  integer
+ATTRIBUTE       RB-DSL-Actual-Inter-Delay-Up               177  integer
+ATTRIBUTE       RB-DSL-Max-Inter-Delay-Down                178  integer
+ATTRIBUTE       RB-DSL-Actual-Inter-Delay-Down             179  integer
+ATTRIBUTE       RB-DSL-Line-State                          180  integer
+VALUE   RB-DSL-Line-State      DSL-LINE-STATE-SHOWTIME             1
+VALUE   RB-DSL-Line-State      DSL-LINE-STATE-IDLE                 2
+VALUE   RB-DSL-Line-State      DSL-LINE-STATE-SILENT               3
+
+ATTRIBUTE       RB-DSL-L2-Encapsulation                    181  integer
+ATTRIBUTE       RB-DSL-Transmission-System                 182  integer
+VALUE   RB-DSL-Transmission-System   DSL-TRANSMISSION-SYSTEM-ADSL1   1
+VALUE   RB-DSL-Transmission-System   DSL-TRANSMISSION-SYSTEM-ADSL2   2
+VALUE   RB-DSL-Transmission-System   DSL-TRANSMISSION-SYSTEM-ADSL2+  3
+VALUE   RB-DSL-Transmission-System   DSL-TRANSMISSION-SYSTEM-VDSL1   4
+VALUE   RB-DSL-Transmission-System   DSL-TRANSMISSION-SYSTEM-VDSL2   5
+VALUE   RB-DSL-Transmission-System   DSL-TRANSMISSION-SYSTEM-SDSL    6
+VALUE   RB-DSL-Transmission-System   DSL-TRANSMISSION-SYSTEM-UNKNOWN 7
+
+ATTRIBUTE       RB-DSL-PPPoA-PPPoE-Inter-Work-Flag         183  integer
+ATTRIBUTE       RB-DSL-Combined-Line-Info                  184  binary
+ATTRIBUTE       RB-DSL-Actual-Rate-Down-Factor             185  integer
+ATTRIBUTE       RB-Class-Traffic-Limit                     186  string
+ATTRIBUTE       RB-Acct-Class-In-Octets-64                 187  string
+ATTRIBUTE       RB-Acct-Class-Out-Octets-64                188  string
+ATTRIBUTE       RB-Flow-FAC-Profile                        189  string
+ATTRIBUTE       RB-Service-Name                            190  tagged-string
+ATTRIBUTE       RB-Service-Options                         191  tagged-integer
+VALUE   RB-Service-Options     SERVICE-OPTIONS-ACCT-DISABLED       0 
+VALUE   RB-Service-Options     SERVICE-OPTIONS-ACCT-ENABLED        1
+
+ATTRIBUTE       RB-Service-Parameter                       192  tagged-string
+ATTRIBUTE       RB-Service-Error-Cause                     193  tagged-integer
+VALUE   RB-Service-Error-Cause   SERVICE-ERROR-CAUSE-SERVICE-SUCCESS           0
+VALUE   RB-Service-Error-Cause   SERVICE-ERROR-CAUSE-UNSUPPORTED-ATTRIBUTE   401
+VALUE   RB-Service-Error-Cause   SERVICE-ERROR-CAUSE-MISSING-ATTRIBUTE       402
+VALUE   RB-Service-Error-Cause   SERVICE-ERROR-CAUSE-INVALID-REQUEST         404
+VALUE   RB-Service-Error-Cause   SERVICE-ERROR-CAUSE-RESOURCE-UNAVAILABLE    506
+VALUE   RB-Service-Error-Cause   SERVICE-ERROR-CAUSE-GENERIC-SERVICE-ERROR   550
+VALUE   RB-Service-Error-Cause   SERVICE-ERROR-CAUSE-SERVICE-NOT-FOUND       551
+VALUE   RB-Service-Error-Cause   SERVICE-ERROR-CAUSE-SERVICE-ALREADY-ACTIVE  552
+
+ATTRIBUTE       RB-Deactivate-Service-Name                 194  tagged-string
+ATTRIBUTE       RB-Qos-Overhead                            195  string
+ATTRIBUTE       RB-Dynamic-Qos-Param                       196  string
+ATTRIBUTE       RB-Acct-Alt-Session-Id                     197  string
+ATTRIBUTE       RB-Idle-Timeout-Threshold                  198  integer
+ATTRIBUTE       RB-Double-Authentication                   199  integer
+ATTRIBUTE       RB-Sbc-Adjacency                           200  string
+ATTRIBUTE       RB-DHCP-Field                              201  binary
+ATTRIBUTE       RB-DHCP-Option                             202  binary
+ATTRIBUTE       RB-Security-Service                        203  string
+ATTRIBUTE       RB-Reauth-Service-Name                     204  tagged-string
+ATTRIBUTE       RB-Location-Lock                           211  string
+
+END-VENDOR	Redback

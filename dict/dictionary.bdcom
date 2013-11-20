@@ -1,0 +1,9 @@
+
+
+VENDOR		Bdcom				3320
+
+BEGIN-VENDOR	Bdcom
+
+ATTRIBUTE	 Bdcom-avpair	1	integer
+
+END-VENDOR	Bdcom

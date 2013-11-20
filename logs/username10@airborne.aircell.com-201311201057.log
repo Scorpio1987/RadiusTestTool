@@ -1,0 +1,392 @@
+2013-11-20 10:57:02,478: DEBUG: Starting the client for the user username10@airborne.aircell.com to the server localhost
+
+2013-11-20 10:57:02,478: DEBUG: DURATION of the TEST: 28
+2013-11-20 10:57:02,479: DEBUG: NAS-IP: 10.254.251.1
+2013-11-20 10:57:02,479: DEBUG: NAS-MAC-ADDR: 19:21:31:41:52:28
+2013-11-20 10:57:02,479: DEBUG: Abruptly End: False
+2013-11-20 10:57:02,479: DEBUG: Framed-IP: 10.254.251.140
+2013-11-20 10:57:02,479: DEBUG: User-MAC-Addr: 00:16:3E:33:B5:06
+2013-11-20 10:57:02,479: DEBUG: 
+
+2013-11-20 10:57:02,480: DEBUG: Creating Authentication Request with the following Attributes:
+2013-11-20 10:57:02,480: DEBUG: NAS-Identifier: [u'C08386']
+2013-11-20 10:57:02,480: DEBUG: User-Name: [u'username10@airborne.aircell.com']
+2013-11-20 10:57:02,480: DEBUG: NAS-IP-Address: ['10.254.251.1']
+2013-11-20 10:57:02,480: DEBUG: Service-Type: ['Authenticate-Only']
+2013-11-20 10:57:02,480: DEBUG: Proxy-State: ['3237,3134']
+2013-11-20 10:57:02,480: DEBUG: Framed-IP-Address: ['10.254.251.140']
+2013-11-20 10:57:02,480: DEBUG: GoGo-Airline: [u'BA01']
+2013-11-20 10:57:02,481: DEBUG: Acct-Session-Id: [u'AAATestNAS_246-1384925222479-00163E33B506-2']
+2013-11-20 10:57:02,481: DEBUG: GoGo-Tail-Number: [u'AAATestNAS_246']
+2013-11-20 10:57:02,481: DEBUG: GoGo-Private-IP-Address: ['192.168.1.179']
+2013-11-20 10:57:02,481: DEBUG: WISPr-Location-ID: [u'airline=BA01,tail=01009,network=']
+2013-11-20 10:57:02,481: DEBUG: WISPr-Location-Name: [u'TEST LLC,BA01_01009']
+2013-11-20 10:57:02,481: DEBUG: NAS-Port-Type: ['Wireless-802.11']
+2013-11-20 10:57:02,481: DEBUG: Called-Station-Id: [u'00:16:3E:33:B5:06']
+2013-11-20 10:57:02,481: DEBUG: Calling-Station-Id: [u'19:21:31:41:52:28']
+2013-11-20 10:57:02,482: DEBUG: 
+
+2013-11-20 10:57:02,483: DEBUG: Received response with code: 2, Accepted
+2013-11-20 10:57:02,483: DEBUG: Creating Authentication Request with the following Attributes:
+2013-11-20 10:57:02,483: DEBUG: NAS-Identifier: [u'C08386']
+2013-11-20 10:57:02,483: DEBUG: User-Name: [u'username10@airborne.aircell.com']
+2013-11-20 10:57:02,483: DEBUG: NAS-IP-Address: ['10.254.251.1']
+2013-11-20 10:57:02,483: DEBUG: Service-Type: ['Login-User']
+2013-11-20 10:57:02,484: DEBUG: Proxy-State: ['3237,3134']
+2013-11-20 10:57:02,484: DEBUG: Framed-IP-Address: ['10.254.251.140']
+2013-11-20 10:57:02,484: DEBUG: GoGo-Airline: [u'BA01']
+2013-11-20 10:57:02,484: DEBUG: Acct-Session-Id: [u'AAATestNAS_246-1384925222483-00163E33B506-2']
+2013-11-20 10:57:02,484: DEBUG: GoGo-Tail-Number: [u'AAATestNAS_246']
+2013-11-20 10:57:02,484: DEBUG: GoGo-Private-IP-Address: ['192.168.1.179']
+2013-11-20 10:57:02,484: DEBUG: WISPr-Location-ID: [u'airline=BA01,tail=01009,network=']
+2013-11-20 10:57:02,484: DEBUG: WISPr-Location-Name: [u'TEST LLC,BA01_01009']
+2013-11-20 10:57:02,484: DEBUG: NAS-Port-Type: ['Wireless-802.11']
+2013-11-20 10:57:02,484: DEBUG: Called-Station-Id: [u'00:16:3E:33:B5:06']
+2013-11-20 10:57:02,485: DEBUG: Calling-Station-Id: [u'19:21:31:41:52:28']
+2013-11-20 10:57:02,486: DEBUG: 
+
+2013-11-20 10:57:02,487: DEBUG: Received response with code: 2, Accepted
+2013-11-20 10:57:02,488: DEBUG: 
+
+2013-11-20 10:57:02,488: DEBUG: Creating Accounting start Request with the following Attributes:
+2013-11-20 10:57:02,489: DEBUG: NAS-Identifier: [u'C08386']
+2013-11-20 10:57:02,489: DEBUG: User-Name: [u'username10@airborne.aircell.com']
+2013-11-20 10:57:02,490: DEBUG: GoGo-Tail-Number: [u'AAATestNAS_246']
+2013-11-20 10:57:02,490: DEBUG: NAS-IP-Address: ['10.254.251.1']
+2013-11-20 10:57:02,491: DEBUG: Proxy-State: ['3239,3131']
+2013-11-20 10:57:02,491: DEBUG: Acct-Status-Type: ['Start']
+2013-11-20 10:57:02,492: DEBUG: GoGo-Airline: [u'BA01']
+2013-11-20 10:57:02,492: DEBUG: Acct-Session-Id: [u'AAATestNAS_246-1384925222483-00163E33B506-2']
+2013-11-20 10:57:02,492: DEBUG: GoGo-Private-IP-Address: ['192.168.1.179']
+2013-11-20 10:57:02,493: DEBUG: Framed-IP-Address: ['10.254.251.140']
+2013-11-20 10:57:02,493: DEBUG: WISPr-Location-ID: [u'airline=BA01,tail=01009,network=']
+2013-11-20 10:57:02,494: DEBUG: WISPr-Location-Name: [u'TEST LLC,BA01_01009']
+2013-11-20 10:57:02,494: DEBUG: NAS-Port-Type: ['Wireless-802.11']
+2013-11-20 10:57:02,495: DEBUG: Called-Station-Id: [u'00:16:3E:33:B5:06']
+2013-11-20 10:57:02,495: DEBUG: Calling-Station-Id: [u'19:21:31:41:52:28']
+2013-11-20 10:57:02,497: DEBUG: 
+
+2013-11-20 10:57:02,498: DEBUG: Received response with following attributes:
+2013-11-20 10:57:12,499: DEBUG: 
+
+2013-11-20 10:57:12,500: DEBUG: Creating Accounting Update Request with the following Attributes:
+2013-11-20 10:57:12,500: DEBUG: User-Name: [u'username10@airborne.aircell.com']
+2013-11-20 10:57:12,501: DEBUG: GoGo-Tail-Number: [u'AAATestNAS_246']
+2013-11-20 10:57:12,501: DEBUG: Acct-Output-Octets: [9907043]
+2013-11-20 10:57:12,501: DEBUG: NAS-IP-Address: ['10.254.251.1']
+2013-11-20 10:57:12,501: DEBUG: GoGo-Total-Output-Gigawords: [0]
+2013-11-20 10:57:12,502: DEBUG: Framed-IP-Address: ['10.254.251.140']
+2013-11-20 10:57:12,502: DEBUG: GoGo-Total-Input-Voice-Gigawords: [0]
+2013-11-20 10:57:12,503: DEBUG: GoGo-Total-Output-Octets: [9907043]
+2013-11-20 10:57:12,504: DEBUG: GoGo-Acct-Input-Voice-Octets: [0]
+2013-11-20 10:57:12,505: DEBUG: GoGo-Total-Input-Voice-Packets: [0]
+2013-11-20 10:57:12,505: DEBUG: Called-Station-Id: [u'00:16:3E:33:B5:06']
+2013-11-20 10:57:12,507: DEBUG: WISPr-Location-Name: [u'TEST LLC,BA01_01009']
+2013-11-20 10:57:12,511: DEBUG: NAS-Identifier: [u'C08386']
+2013-11-20 10:57:12,512: DEBUG: Proxy-State: ['3330,3132']
+2013-11-20 10:57:12,513: DEBUG: GoGo-Total-Input-Voice-Octets: [0]
+2013-11-20 10:57:12,514: DEBUG: Acct-Status-Type: ['Interim-Update']
+2013-11-20 10:57:12,516: DEBUG: GoGo-Total-Output-Voice-Gigawords: [0]
+2013-11-20 10:57:12,518: DEBUG: GoGo-Airline: [u'BA01']
+2013-11-20 10:57:12,519: DEBUG: Acct-Session-Id: [u'AAATestNAS_246-1384925222483-00163E33B506-2']
+2013-11-20 10:57:12,519: DEBUG: Acct-Session-Time: [10]
+2013-11-20 10:57:12,521: DEBUG: Acct-Input-Packets: [18288]
+2013-11-20 10:57:12,522: DEBUG: Acct-Output-Packets: [24203]
+2013-11-20 10:57:12,523: DEBUG: GoGo-Acct-Output-Voice-Packets: [0]
+2013-11-20 10:57:12,524: DEBUG: GoGo-Acct-Output-Voice-Octets: [0]
+2013-11-20 10:57:12,525: DEBUG: Acct-Output-Gigawords: [0]
+2013-11-20 10:57:12,525: DEBUG: GoGo-Total-Output-Voice-Packets: [0]
+2013-11-20 10:57:12,525: DEBUG: Acct-Input-Gigawords: [0]
+2013-11-20 10:57:12,528: DEBUG: Calling-Station-Id: [u'19:21:31:41:52:28']
+2013-11-20 10:57:12,529: DEBUG: NAS-Port-Type: ['Wireless-802.11']
+2013-11-20 10:57:12,529: DEBUG: GoGo-Total-Output-Voice-Octets: [0]
+2013-11-20 10:57:12,530: DEBUG: GoGo-Private-IP-Address: ['192.168.1.179']
+2013-11-20 10:57:12,533: DEBUG: GoGo-Acct-Input-Voice-Gigawords: [0]
+2013-11-20 10:57:12,534: DEBUG: GoGo-Total-Input-Packets: [18288]
+2013-11-20 10:57:12,534: DEBUG: GoGo-Total-Input-Gigawords: [0]
+2013-11-20 10:57:12,535: DEBUG: GoGo-Acct-Input-Voice-Packets: [0]
+2013-11-20 10:57:12,535: DEBUG: GoGo-Total-Input-Octets: [2387718]
+2013-11-20 10:57:12,537: DEBUG: GoGo-Total-Output-Packets: [24203]
+2013-11-20 10:57:12,538: DEBUG: WISPr-Location-ID: [u'airline=BA01,tail=01009,network=']
+2013-11-20 10:57:12,539: DEBUG: GoGo-Acct-Output-Voice-Gigawords: [0]
+2013-11-20 10:57:12,539: DEBUG: Acct-Input-Octets: [2387718]
+2013-11-20 10:57:12,544: DEBUG: 
+
+2013-11-20 10:57:12,545: DEBUG: Received response with following attributes:
+2013-11-20 10:57:22,546: DEBUG: 
+
+2013-11-20 10:57:22,547: DEBUG: Creating Accounting Update Request with the following Attributes:
+2013-11-20 10:57:22,547: DEBUG: User-Name: [u'username10@airborne.aircell.com']
+2013-11-20 10:57:22,547: DEBUG: GoGo-Tail-Number: [u'AAATestNAS_246']
+2013-11-20 10:57:22,547: DEBUG: Acct-Output-Octets: [8232364]
+2013-11-20 10:57:22,548: DEBUG: NAS-IP-Address: ['10.254.251.1']
+2013-11-20 10:57:22,548: DEBUG: GoGo-Total-Output-Gigawords: [0]
+2013-11-20 10:57:22,548: DEBUG: Framed-IP-Address: ['10.254.251.140']
+2013-11-20 10:57:22,548: DEBUG: GoGo-Total-Input-Voice-Gigawords: [0]
+2013-11-20 10:57:22,548: DEBUG: GoGo-Total-Output-Octets: [8232364]
+2013-11-20 10:57:22,548: DEBUG: GoGo-Acct-Input-Voice-Octets: [0]
+2013-11-20 10:57:22,548: DEBUG: GoGo-Total-Input-Voice-Packets: [0]
+2013-11-20 10:57:22,548: DEBUG: Called-Station-Id: [u'00:16:3E:33:B5:06']
+2013-11-20 10:57:22,548: DEBUG: WISPr-Location-Name: [u'TEST LLC,BA01_01009']
+2013-11-20 10:57:22,549: DEBUG: NAS-Identifier: [u'C08386']
+2013-11-20 10:57:22,549: DEBUG: Proxy-State: ['3330,3132']
+2013-11-20 10:57:22,549: DEBUG: GoGo-Total-Input-Voice-Octets: [0]
+2013-11-20 10:57:22,549: DEBUG: Acct-Status-Type: ['Interim-Update']
+2013-11-20 10:57:22,549: DEBUG: GoGo-Total-Output-Voice-Gigawords: [0]
+2013-11-20 10:57:22,549: DEBUG: GoGo-Airline: [u'BA01']
+2013-11-20 10:57:22,549: DEBUG: Acct-Session-Id: [u'AAATestNAS_246-1384925222483-00163E33B506-2']
+2013-11-20 10:57:22,549: DEBUG: Acct-Session-Time: [10]
+2013-11-20 10:57:22,549: DEBUG: Acct-Input-Packets: [6145]
+2013-11-20 10:57:22,550: DEBUG: Acct-Output-Packets: [33814]
+2013-11-20 10:57:22,550: DEBUG: GoGo-Acct-Output-Voice-Packets: [0]
+2013-11-20 10:57:22,550: DEBUG: GoGo-Acct-Output-Voice-Octets: [0]
+2013-11-20 10:57:22,550: DEBUG: Acct-Output-Gigawords: [0]
+2013-11-20 10:57:22,550: DEBUG: GoGo-Total-Output-Voice-Packets: [0]
+2013-11-20 10:57:22,550: DEBUG: Acct-Input-Gigawords: [0]
+2013-11-20 10:57:22,550: DEBUG: Calling-Station-Id: [u'19:21:31:41:52:28']
+2013-11-20 10:57:22,550: DEBUG: NAS-Port-Type: ['Wireless-802.11']
+2013-11-20 10:57:22,550: DEBUG: GoGo-Total-Output-Voice-Octets: [0]
+2013-11-20 10:57:22,551: DEBUG: GoGo-Private-IP-Address: ['192.168.1.179']
+2013-11-20 10:57:22,551: DEBUG: GoGo-Acct-Input-Voice-Gigawords: [0]
+2013-11-20 10:57:22,551: DEBUG: GoGo-Total-Input-Packets: [6145]
+2013-11-20 10:57:22,551: DEBUG: GoGo-Total-Input-Gigawords: [0]
+2013-11-20 10:57:22,551: DEBUG: GoGo-Acct-Input-Voice-Packets: [0]
+2013-11-20 10:57:22,551: DEBUG: GoGo-Total-Input-Octets: [3523730]
+2013-11-20 10:57:22,551: DEBUG: GoGo-Total-Output-Packets: [33814]
+2013-11-20 10:57:22,551: DEBUG: WISPr-Location-ID: [u'airline=BA01,tail=01009,network=']
+2013-11-20 10:57:22,551: DEBUG: GoGo-Acct-Output-Voice-Gigawords: [0]
+2013-11-20 10:57:22,551: DEBUG: Acct-Input-Octets: [3523730]
+2013-11-20 10:57:22,553: DEBUG: 
+
+2013-11-20 10:57:22,554: DEBUG: Received response with following attributes:
+2013-11-20 10:57:30,555: DEBUG: 
+
+2013-11-20 10:57:30,556: DEBUG: Creating Accounting Update Request with the following Attributes:
+2013-11-20 10:57:30,556: DEBUG: User-Name: [u'username10@airborne.aircell.com']
+2013-11-20 10:57:30,557: DEBUG: GoGo-Tail-Number: [u'AAATestNAS_246']
+2013-11-20 10:57:30,557: DEBUG: Acct-Output-Octets: [4736007]
+2013-11-20 10:57:30,558: DEBUG: NAS-IP-Address: ['10.254.251.1']
+2013-11-20 10:57:30,558: DEBUG: GoGo-Total-Output-Gigawords: [0]
+2013-11-20 10:57:30,559: DEBUG: Framed-IP-Address: ['10.254.251.140']
+2013-11-20 10:57:30,560: DEBUG: GoGo-Total-Input-Voice-Gigawords: [0]
+2013-11-20 10:57:30,560: DEBUG: GoGo-Total-Output-Octets: [4736007]
+2013-11-20 10:57:30,561: DEBUG: GoGo-Acct-Input-Voice-Octets: [0]
+2013-11-20 10:57:30,561: DEBUG: GoGo-Total-Input-Voice-Packets: [0]
+2013-11-20 10:57:30,562: DEBUG: Called-Station-Id: [u'00:16:3E:33:B5:06']
+2013-11-20 10:57:30,562: DEBUG: WISPr-Location-Name: [u'TEST LLC,BA01_01009']
+2013-11-20 10:57:30,563: DEBUG: NAS-Identifier: [u'C08386']
+2013-11-20 10:57:30,563: DEBUG: Proxy-State: ['3330,3132']
+2013-11-20 10:57:30,564: DEBUG: GoGo-Total-Input-Voice-Octets: [0]
+2013-11-20 10:57:30,564: DEBUG: Acct-Status-Type: ['Interim-Update']
+2013-11-20 10:57:30,565: DEBUG: GoGo-Total-Output-Voice-Gigawords: [0]
+2013-11-20 10:57:30,565: DEBUG: GoGo-Airline: [u'BA01']
+2013-11-20 10:57:30,566: DEBUG: Acct-Session-Id: [u'AAATestNAS_246-1384925222483-00163E33B506-2']
+2013-11-20 10:57:30,567: DEBUG: Acct-Session-Time: [8]
+2013-11-20 10:57:30,568: DEBUG: Acct-Input-Packets: [14353]
+2013-11-20 10:57:30,569: DEBUG: Acct-Output-Packets: [38781]
+2013-11-20 10:57:30,570: DEBUG: GoGo-Acct-Output-Voice-Packets: [0]
+2013-11-20 10:57:30,571: DEBUG: GoGo-Acct-Output-Voice-Octets: [0]
+2013-11-20 10:57:30,572: DEBUG: Acct-Output-Gigawords: [0]
+2013-11-20 10:57:30,572: DEBUG: GoGo-Total-Output-Voice-Packets: [0]
+2013-11-20 10:57:30,572: DEBUG: Acct-Input-Gigawords: [0]
+2013-11-20 10:57:30,573: DEBUG: Calling-Station-Id: [u'19:21:31:41:52:28']
+2013-11-20 10:57:30,574: DEBUG: NAS-Port-Type: ['Wireless-802.11']
+2013-11-20 10:57:30,575: DEBUG: GoGo-Total-Output-Voice-Octets: [0]
+2013-11-20 10:57:30,576: DEBUG: GoGo-Private-IP-Address: ['192.168.1.179']
+2013-11-20 10:57:30,576: DEBUG: GoGo-Acct-Input-Voice-Gigawords: [0]
+2013-11-20 10:57:30,577: DEBUG: GoGo-Total-Input-Packets: [14353]
+2013-11-20 10:57:30,578: DEBUG: GoGo-Total-Input-Gigawords: [0]
+2013-11-20 10:57:30,579: DEBUG: GoGo-Acct-Input-Voice-Packets: [0]
+2013-11-20 10:57:30,579: DEBUG: GoGo-Total-Input-Octets: [8024706]
+2013-11-20 10:57:30,579: DEBUG: GoGo-Total-Output-Packets: [38781]
+2013-11-20 10:57:30,580: DEBUG: WISPr-Location-ID: [u'airline=BA01,tail=01009,network=']
+2013-11-20 10:57:30,581: DEBUG: GoGo-Acct-Output-Voice-Gigawords: [0]
+2013-11-20 10:57:30,582: DEBUG: Acct-Input-Octets: [8024706]
+2013-11-20 10:57:30,585: DEBUG: 
+
+2013-11-20 10:57:30,585: DEBUG: Received response with following attributes:
+2013-11-20 10:57:44,586: DEBUG: 
+
+2013-11-20 10:57:44,588: DEBUG: Creating Accounting Stop Request with the following Attributes:
+2013-11-20 10:57:44,588: DEBUG: User-Name: [u'username10@airborne.aircell.com']
+2013-11-20 10:57:44,588: DEBUG: GoGo-Tail-Number: [u'01009']
+2013-11-20 10:57:44,588: DEBUG: Acct-Output-Octets: [5228670]
+2013-11-20 10:57:44,589: DEBUG: NAS-IP-Address: ['10.254.251.1']
+2013-11-20 10:57:44,589: DEBUG: GoGo-Total-Output-Gigawords: [0]
+2013-11-20 10:57:44,589: DEBUG: Framed-IP-Address: ['10.254.251.140']
+2013-11-20 10:57:44,589: DEBUG: GoGo-Total-Input-Voice-Gigawords: [0]
+2013-11-20 10:57:44,590: DEBUG: GoGo-Total-Output-Octets: [5228670]
+2013-11-20 10:57:44,590: DEBUG: GoGo-Acct-Input-Voice-Octets: [0]
+2013-11-20 10:57:44,590: DEBUG: GoGo-Total-Input-Voice-Packets: [0]
+2013-11-20 10:57:44,590: DEBUG: Called-Station-Id: [u'00:16:3E:33:B5:06']
+2013-11-20 10:57:44,590: DEBUG: WISPr-Location-Name: [u'TEST LLC,BA01_01009']
+2013-11-20 10:57:44,591: DEBUG: NAS-Identifier: [u'C08386']
+2013-11-20 10:57:44,591: DEBUG: Proxy-State: ['3330,3132']
+2013-11-20 10:57:44,591: DEBUG: GoGo-Total-Input-Voice-Octets: [0]
+2013-11-20 10:57:44,591: DEBUG: Acct-Status-Type: ['Stop']
+2013-11-20 10:57:44,591: DEBUG: GoGo-Total-Output-Voice-Gigawords: [0]
+2013-11-20 10:57:44,591: DEBUG: GoGo-Airline: [u'BA01']
+2013-11-20 10:57:44,592: DEBUG: Acct-Session-Id: [u'AAATestNAS_246-1384925222483-00163E33B506-2']
+2013-11-20 10:57:44,592: DEBUG: Acct-Session-Time: [14]
+2013-11-20 10:57:44,592: DEBUG: Acct-Input-Packets: [80619]
+2013-11-20 10:57:44,592: DEBUG: Acct-Output-Packets: [40895]
+2013-11-20 10:57:44,592: DEBUG: Acct-Terminate-Cause: ['User-Request']
+2013-11-20 10:57:44,592: DEBUG: GoGo-Acct-Output-Voice-Octets: [0]
+2013-11-20 10:57:44,593: DEBUG: Acct-Output-Gigawords: [0]
+2013-11-20 10:57:44,593: DEBUG: GoGo-Total-Output-Voice-Packets: [0]
+2013-11-20 10:57:44,593: DEBUG: Acct-Input-Gigawords: [0]
+2013-11-20 10:57:44,593: DEBUG: Calling-Station-Id: [u'19:21:31:41:52:28']
+2013-11-20 10:57:44,593: DEBUG: NAS-Port-Type: ['Wireless-802.11']
+2013-11-20 10:57:44,593: DEBUG: GoGo-Total-Output-Voice-Octets: [0]
+2013-11-20 10:57:44,593: DEBUG: GoGo-Private-IP-Address: ['192.168.1.179']
+2013-11-20 10:57:44,594: DEBUG: GoGo-Acct-Input-Voice-Gigawords: [0]
+2013-11-20 10:57:44,594: DEBUG: GoGo-Total-Input-Packets: [80619]
+2013-11-20 10:57:44,594: DEBUG: GoGo-Total-Input-Gigawords: [0]
+2013-11-20 10:57:44,594: DEBUG: GoGo-Acct-Input-Voice-Packets: [0]
+2013-11-20 10:57:44,594: DEBUG: GoGo-Total-Input-Octets: [9183386]
+2013-11-20 10:57:44,594: DEBUG: GoGo-Total-Output-Packets: [40895]
+2013-11-20 10:57:44,595: DEBUG: WISPr-Location-ID: [u'airline=BA01,tail=01009,network=']
+2013-11-20 10:57:44,595: DEBUG: GoGo-Acct-Output-Voice-Packets: [0]
+2013-11-20 10:57:44,595: DEBUG: GoGo-Acct-Output-Voice-Gigawords: [0]
+2013-11-20 10:57:44,595: DEBUG: Acct-Input-Octets: [9183386]
+2013-11-20 10:57:44,595: ERROR: Network error, Reason: 'Network error: Too many open files'
+2013-11-20 10:57:44,595: ERROR: Ending the test for this user
+2013-11-20 10:57:44,596: DEBUG: Ending the test for this user
+2013-11-20 10:57:45,523: DEBUG: Starting the client for the user username10@airborne.aircell.com to the server localhost
+
+2013-11-20 10:57:45,523: DEBUG: Starting the client for the user username10@airborne.aircell.com to the server localhost
+
+2013-11-20 10:57:45,523: DEBUG: DURATION of the TEST: 66
+2013-11-20 10:57:45,523: DEBUG: DURATION of the TEST: 66
+2013-11-20 10:57:45,523: DEBUG: NAS-IP: 10.254.96.1
+2013-11-20 10:57:45,523: DEBUG: NAS-IP: 10.254.96.1
+2013-11-20 10:57:45,523: DEBUG: NAS-MAC-ADDR: 17:21:31:41:52:61
+2013-11-20 10:57:45,523: DEBUG: NAS-MAC-ADDR: 17:21:31:41:52:61
+2013-11-20 10:57:45,523: DEBUG: Abruptly End: False
+2013-11-20 10:57:45,523: DEBUG: Abruptly End: False
+2013-11-20 10:57:45,524: DEBUG: Framed-IP: 10.254.96.171
+2013-11-20 10:57:45,524: DEBUG: Framed-IP: 10.254.96.171
+2013-11-20 10:57:45,524: DEBUG: User-MAC-Addr: 00:16:3E:77:CE:12
+2013-11-20 10:57:45,524: DEBUG: User-MAC-Addr: 00:16:3E:77:CE:12
+2013-11-20 10:57:45,524: DEBUG: 
+
+2013-11-20 10:57:45,524: DEBUG: 
+
+2013-11-20 10:57:45,525: DEBUG: Creating Authentication Request with the following Attributes:
+2013-11-20 10:57:45,525: DEBUG: Creating Authentication Request with the following Attributes:
+2013-11-20 10:57:45,525: DEBUG: NAS-Identifier: [u'C08386']
+2013-11-20 10:57:45,525: DEBUG: NAS-Identifier: [u'C08386']
+2013-11-20 10:57:45,525: DEBUG: User-Name: [u'username10@airborne.aircell.com']
+2013-11-20 10:57:45,525: DEBUG: User-Name: [u'username10@airborne.aircell.com']
+2013-11-20 10:57:45,525: DEBUG: NAS-IP-Address: ['10.254.96.1']
+2013-11-20 10:57:45,525: DEBUG: NAS-IP-Address: ['10.254.96.1']
+2013-11-20 10:57:45,525: DEBUG: Service-Type: ['Authenticate-Only']
+2013-11-20 10:57:45,525: DEBUG: Service-Type: ['Authenticate-Only']
+2013-11-20 10:57:45,526: DEBUG: Proxy-State: ['3237,3134']
+2013-11-20 10:57:45,526: DEBUG: Proxy-State: ['3237,3134']
+2013-11-20 10:57:45,526: DEBUG: Framed-IP-Address: ['10.254.96.171']
+2013-11-20 10:57:45,526: DEBUG: Framed-IP-Address: ['10.254.96.171']
+2013-11-20 10:57:45,526: DEBUG: GoGo-Airline: [u'BA01']
+2013-11-20 10:57:45,526: DEBUG: GoGo-Airline: [u'BA01']
+2013-11-20 10:57:45,526: DEBUG: Acct-Session-Id: [u'AAATestNAS_91-1384925265524-00163E77CE12-3']
+2013-11-20 10:57:45,526: DEBUG: Acct-Session-Id: [u'AAATestNAS_91-1384925265524-00163E77CE12-3']
+2013-11-20 10:57:45,526: DEBUG: GoGo-Tail-Number: [u'AAATestNAS_91']
+2013-11-20 10:57:45,526: DEBUG: GoGo-Tail-Number: [u'AAATestNAS_91']
+2013-11-20 10:57:45,526: DEBUG: GoGo-Private-IP-Address: ['192.168.1.179']
+2013-11-20 10:57:45,526: DEBUG: GoGo-Private-IP-Address: ['192.168.1.179']
+2013-11-20 10:57:45,526: DEBUG: WISPr-Location-ID: [u'airline=BA01,tail=01009,network=']
+2013-11-20 10:57:45,526: DEBUG: WISPr-Location-ID: [u'airline=BA01,tail=01009,network=']
+2013-11-20 10:57:45,527: DEBUG: WISPr-Location-Name: [u'TEST LLC,BA01_01009']
+2013-11-20 10:57:45,527: DEBUG: WISPr-Location-Name: [u'TEST LLC,BA01_01009']
+2013-11-20 10:57:45,527: DEBUG: NAS-Port-Type: ['Wireless-802.11']
+2013-11-20 10:57:45,527: DEBUG: NAS-Port-Type: ['Wireless-802.11']
+2013-11-20 10:57:45,527: DEBUG: Called-Station-Id: [u'00:16:3E:77:CE:12']
+2013-11-20 10:57:45,527: DEBUG: Called-Station-Id: [u'00:16:3E:77:CE:12']
+2013-11-20 10:57:45,527: DEBUG: Calling-Station-Id: [u'17:21:31:41:52:61']
+2013-11-20 10:57:45,527: DEBUG: Calling-Station-Id: [u'17:21:31:41:52:61']
+2013-11-20 10:57:45,529: DEBUG: 
+
+2013-11-20 10:57:45,529: DEBUG: 
+
+2013-11-20 10:57:45,529: DEBUG: Received response with code: 2, Accepted
+2013-11-20 10:57:45,529: DEBUG: Received response with code: 2, Accepted
+2013-11-20 10:57:45,529: DEBUG: Creating Authentication Request with the following Attributes:
+2013-11-20 10:57:45,529: DEBUG: Creating Authentication Request with the following Attributes:
+2013-11-20 10:57:45,530: DEBUG: NAS-Identifier: [u'C08386']
+2013-11-20 10:57:45,530: DEBUG: NAS-Identifier: [u'C08386']
+2013-11-20 10:57:45,530: DEBUG: User-Name: [u'username10@airborne.aircell.com']
+2013-11-20 10:57:45,530: DEBUG: User-Name: [u'username10@airborne.aircell.com']
+2013-11-20 10:57:45,530: DEBUG: NAS-IP-Address: ['10.254.96.1']
+2013-11-20 10:57:45,530: DEBUG: NAS-IP-Address: ['10.254.96.1']
+2013-11-20 10:57:45,530: DEBUG: Service-Type: ['Login-User']
+2013-11-20 10:57:45,530: DEBUG: Service-Type: ['Login-User']
+2013-11-20 10:57:45,530: DEBUG: Proxy-State: ['3237,3134']
+2013-11-20 10:57:45,530: DEBUG: Proxy-State: ['3237,3134']
+2013-11-20 10:57:45,530: DEBUG: Framed-IP-Address: ['10.254.96.171']
+2013-11-20 10:57:45,530: DEBUG: Framed-IP-Address: ['10.254.96.171']
+2013-11-20 10:57:45,531: DEBUG: GoGo-Airline: [u'BA01']
+2013-11-20 10:57:45,531: DEBUG: GoGo-Airline: [u'BA01']
+2013-11-20 10:57:45,531: DEBUG: Acct-Session-Id: [u'AAATestNAS_91-1384925265529-00163E77CE12-3']
+2013-11-20 10:57:45,531: DEBUG: Acct-Session-Id: [u'AAATestNAS_91-1384925265529-00163E77CE12-3']
+2013-11-20 10:57:45,531: DEBUG: GoGo-Tail-Number: [u'AAATestNAS_91']
+2013-11-20 10:57:45,531: DEBUG: GoGo-Tail-Number: [u'AAATestNAS_91']
+2013-11-20 10:57:45,531: DEBUG: GoGo-Private-IP-Address: ['192.168.1.179']
+2013-11-20 10:57:45,531: DEBUG: GoGo-Private-IP-Address: ['192.168.1.179']
+2013-11-20 10:57:45,531: DEBUG: WISPr-Location-ID: [u'airline=BA01,tail=01009,network=']
+2013-11-20 10:57:45,531: DEBUG: WISPr-Location-ID: [u'airline=BA01,tail=01009,network=']
+2013-11-20 10:57:45,531: DEBUG: WISPr-Location-Name: [u'TEST LLC,BA01_01009']
+2013-11-20 10:57:45,531: DEBUG: WISPr-Location-Name: [u'TEST LLC,BA01_01009']
+2013-11-20 10:57:45,531: DEBUG: NAS-Port-Type: ['Wireless-802.11']
+2013-11-20 10:57:45,531: DEBUG: NAS-Port-Type: ['Wireless-802.11']
+2013-11-20 10:57:45,531: DEBUG: Called-Station-Id: [u'00:16:3E:77:CE:12']
+2013-11-20 10:57:45,531: DEBUG: Called-Station-Id: [u'00:16:3E:77:CE:12']
+2013-11-20 10:57:45,532: DEBUG: Calling-Station-Id: [u'17:21:31:41:52:61']
+2013-11-20 10:57:45,532: DEBUG: Calling-Station-Id: [u'17:21:31:41:52:61']
+2013-11-20 10:57:45,533: DEBUG: 
+
+2013-11-20 10:57:45,533: DEBUG: 
+
+2013-11-20 10:57:45,534: DEBUG: Received response with code: 2, Accepted
+2013-11-20 10:57:45,534: DEBUG: Received response with code: 2, Accepted
+2013-11-20 10:57:45,534: DEBUG: 
+
+2013-11-20 10:57:45,534: DEBUG: 
+
+2013-11-20 10:57:45,534: DEBUG: Creating Accounting start Request with the following Attributes:
+2013-11-20 10:57:45,534: DEBUG: Creating Accounting start Request with the following Attributes:
+2013-11-20 10:57:45,535: DEBUG: NAS-Identifier: [u'C08386']
+2013-11-20 10:57:45,535: DEBUG: NAS-Identifier: [u'C08386']
+2013-11-20 10:57:45,535: DEBUG: User-Name: [u'username10@airborne.aircell.com']
+2013-11-20 10:57:45,535: DEBUG: User-Name: [u'username10@airborne.aircell.com']
+2013-11-20 10:57:45,536: DEBUG: GoGo-Tail-Number: [u'AAATestNAS_91']
+2013-11-20 10:57:45,536: DEBUG: GoGo-Tail-Number: [u'AAATestNAS_91']
+2013-11-20 10:57:45,536: DEBUG: NAS-IP-Address: ['10.254.96.1']
+2013-11-20 10:57:45,536: DEBUG: NAS-IP-Address: ['10.254.96.1']
+2013-11-20 10:57:45,537: DEBUG: Proxy-State: ['3239,3131']
+2013-11-20 10:57:45,537: DEBUG: Proxy-State: ['3239,3131']
+2013-11-20 10:57:45,537: DEBUG: Acct-Status-Type: ['Start']
+2013-11-20 10:57:45,537: DEBUG: Acct-Status-Type: ['Start']
+2013-11-20 10:57:45,537: DEBUG: GoGo-Airline: [u'BA01']
+2013-11-20 10:57:45,537: DEBUG: GoGo-Airline: [u'BA01']
+2013-11-20 10:57:45,538: DEBUG: Acct-Session-Id: [u'AAATestNAS_91-1384925265529-00163E77CE12-3']
+2013-11-20 10:57:45,538: DEBUG: Acct-Session-Id: [u'AAATestNAS_91-1384925265529-00163E77CE12-3']
+2013-11-20 10:57:45,538: DEBUG: GoGo-Private-IP-Address: ['192.168.1.179']
+2013-11-20 10:57:45,538: DEBUG: GoGo-Private-IP-Address: ['192.168.1.179']
+2013-11-20 10:57:45,539: DEBUG: Framed-IP-Address: ['10.254.96.171']
+2013-11-20 10:57:45,539: DEBUG: Framed-IP-Address: ['10.254.96.171']
+2013-11-20 10:57:45,540: DEBUG: WISPr-Location-ID: [u'airline=BA01,tail=01009,network=']
+2013-11-20 10:57:45,540: DEBUG: WISPr-Location-ID: [u'airline=BA01,tail=01009,network=']
+2013-11-20 10:57:45,540: DEBUG: WISPr-Location-Name: [u'TEST LLC,BA01_01009']
+2013-11-20 10:57:45,540: DEBUG: WISPr-Location-Name: [u'TEST LLC,BA01_01009']
+2013-11-20 10:57:45,541: DEBUG: NAS-Port-Type: ['Wireless-802.11']
+2013-11-20 10:57:45,541: DEBUG: NAS-Port-Type: ['Wireless-802.11']
+2013-11-20 10:57:45,541: DEBUG: Called-Station-Id: [u'00:16:3E:77:CE:12']
+2013-11-20 10:57:45,541: DEBUG: Called-Station-Id: [u'00:16:3E:77:CE:12']
+2013-11-20 10:57:45,542: DEBUG: Calling-Station-Id: [u'17:21:31:41:52:61']
+2013-11-20 10:57:45,542: DEBUG: Calling-Station-Id: [u'17:21:31:41:52:61']
+2013-11-20 10:57:45,543: ERROR: Network error, Reason: 'Network error: nodename nor servname provided, or not known'
+2013-11-20 10:57:45,543: ERROR: Network error, Reason: 'Network error: nodename nor servname provided, or not known'
+2013-11-20 10:57:45,543: DEBUG: Ending the test for this user
+2013-11-20 10:57:45,543: DEBUG: Ending the test for this user
+2013-11-20 10:57:46,544: DEBUG: Starting the client for the user username10@airborne.aircell.com to the server localhost
+

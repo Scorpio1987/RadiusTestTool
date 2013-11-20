@@ -1,0 +1,68 @@
+2013-11-20 10:57:31,519: DEBUG: Starting the client for the user username9@airborne.aircell.com to the server localhost
+
+2013-11-20 10:57:31,519: DEBUG: DURATION of the TEST: 70
+2013-11-20 10:57:31,520: DEBUG: NAS-IP: 10.254.104.1
+2013-11-20 10:57:31,520: DEBUG: NAS-MAC-ADDR: 17:21:31:41:52:69
+2013-11-20 10:57:31,520: DEBUG: Abruptly End: False
+2013-11-20 10:57:31,520: DEBUG: Framed-IP: 10.254.104.51
+2013-11-20 10:57:31,520: DEBUG: User-MAC-Addr: 00:16:3E:14:46:F1
+2013-11-20 10:57:31,521: DEBUG: 
+
+2013-11-20 10:57:31,521: DEBUG: Creating Authentication Request with the following Attributes:
+2013-11-20 10:57:31,521: DEBUG: NAS-Identifier: [u'C08386']
+2013-11-20 10:57:31,521: DEBUG: User-Name: [u'username9@airborne.aircell.com']
+2013-11-20 10:57:31,522: DEBUG: NAS-IP-Address: ['10.254.104.1']
+2013-11-20 10:57:31,522: DEBUG: Service-Type: ['Authenticate-Only']
+2013-11-20 10:57:31,522: DEBUG: Proxy-State: ['3237,3134']
+2013-11-20 10:57:31,522: DEBUG: Framed-IP-Address: ['10.254.104.51']
+2013-11-20 10:57:31,522: DEBUG: GoGo-Airline: [u'BA01']
+2013-11-20 10:57:31,522: DEBUG: Acct-Session-Id: [u'AAATestNAS_99-1384925251521-00163E1446F1-1']
+2013-11-20 10:57:31,522: DEBUG: GoGo-Tail-Number: [u'AAATestNAS_99']
+2013-11-20 10:57:31,522: DEBUG: GoGo-Private-IP-Address: ['192.168.1.179']
+2013-11-20 10:57:31,523: DEBUG: WISPr-Location-ID: [u'airline=BA01,tail=01009,network=']
+2013-11-20 10:57:31,523: DEBUG: WISPr-Location-Name: [u'TEST LLC,BA01_01009']
+2013-11-20 10:57:31,523: DEBUG: NAS-Port-Type: ['Wireless-802.11']
+2013-11-20 10:57:31,523: DEBUG: Called-Station-Id: [u'00:16:3E:14:46:F1']
+2013-11-20 10:57:31,523: DEBUG: Calling-Station-Id: [u'17:21:31:41:52:69']
+2013-11-20 10:57:31,525: DEBUG: 
+
+2013-11-20 10:57:31,525: DEBUG: Received response with code: 2, Accepted
+2013-11-20 10:57:31,526: DEBUG: Creating Authentication Request with the following Attributes:
+2013-11-20 10:57:31,526: DEBUG: NAS-Identifier: [u'C08386']
+2013-11-20 10:57:31,526: DEBUG: User-Name: [u'username9@airborne.aircell.com']
+2013-11-20 10:57:31,526: DEBUG: NAS-IP-Address: ['10.254.104.1']
+2013-11-20 10:57:31,526: DEBUG: Service-Type: ['Login-User']
+2013-11-20 10:57:31,526: DEBUG: Proxy-State: ['3237,3134']
+2013-11-20 10:57:31,526: DEBUG: Framed-IP-Address: ['10.254.104.51']
+2013-11-20 10:57:31,527: DEBUG: GoGo-Airline: [u'BA01']
+2013-11-20 10:57:31,527: DEBUG: Acct-Session-Id: [u'AAATestNAS_99-1384925251525-00163E1446F1-1']
+2013-11-20 10:57:31,527: DEBUG: GoGo-Tail-Number: [u'AAATestNAS_99']
+2013-11-20 10:57:31,527: DEBUG: GoGo-Private-IP-Address: ['192.168.1.179']
+2013-11-20 10:57:31,527: DEBUG: WISPr-Location-ID: [u'airline=BA01,tail=01009,network=']
+2013-11-20 10:57:31,527: DEBUG: WISPr-Location-Name: [u'TEST LLC,BA01_01009']
+2013-11-20 10:57:31,527: DEBUG: NAS-Port-Type: ['Wireless-802.11']
+2013-11-20 10:57:31,527: DEBUG: Called-Station-Id: [u'00:16:3E:14:46:F1']
+2013-11-20 10:57:31,528: DEBUG: Calling-Station-Id: [u'17:21:31:41:52:69']
+2013-11-20 10:57:31,529: DEBUG: 
+
+2013-11-20 10:57:31,530: DEBUG: Received response with code: 2, Accepted
+2013-11-20 10:57:31,531: DEBUG: 
+
+2013-11-20 10:57:31,531: DEBUG: Creating Accounting start Request with the following Attributes:
+2013-11-20 10:57:31,532: DEBUG: NAS-Identifier: [u'C08386']
+2013-11-20 10:57:31,533: DEBUG: User-Name: [u'username9@airborne.aircell.com']
+2013-11-20 10:57:31,534: DEBUG: GoGo-Tail-Number: [u'AAATestNAS_99']
+2013-11-20 10:57:31,534: DEBUG: NAS-IP-Address: ['10.254.104.1']
+2013-11-20 10:57:31,535: DEBUG: Proxy-State: ['3239,3131']
+2013-11-20 10:57:31,536: DEBUG: Acct-Status-Type: ['Start']
+2013-11-20 10:57:31,536: DEBUG: GoGo-Airline: [u'BA01']
+2013-11-20 10:57:31,536: DEBUG: Acct-Session-Id: [u'AAATestNAS_99-1384925251525-00163E1446F1-1']
+2013-11-20 10:57:31,537: DEBUG: GoGo-Private-IP-Address: ['192.168.1.179']
+2013-11-20 10:57:31,538: DEBUG: Framed-IP-Address: ['10.254.104.51']
+2013-11-20 10:57:31,538: DEBUG: WISPr-Location-ID: [u'airline=BA01,tail=01009,network=']
+2013-11-20 10:57:31,539: DEBUG: WISPr-Location-Name: [u'TEST LLC,BA01_01009']
+2013-11-20 10:57:31,540: DEBUG: NAS-Port-Type: ['Wireless-802.11']
+2013-11-20 10:57:31,540: DEBUG: Called-Station-Id: [u'00:16:3E:14:46:F1']
+2013-11-20 10:57:31,540: DEBUG: Calling-Station-Id: [u'17:21:31:41:52:69']
+2013-11-20 10:57:31,542: ERROR: Network error, Reason: 'Network error: nodename nor servname provided, or not known'
+2013-11-20 10:57:31,543: DEBUG: Ending the test for this user

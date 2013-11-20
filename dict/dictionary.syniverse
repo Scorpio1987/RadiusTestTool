@@ -1,0 +1,19 @@
+# -*- text -*-
+##############################################################################
+#
+#	Syniverse dictionary
+#
+##############################################################################
+
+VENDOR		Syniverse				14369
+
+BEGIN-VENDOR	Syniverse
+
+ATTRIBUTE	SVR-Zip-Code				14	string
+ATTRIBUTE	SVR-Device-Type				17	integer
+ATTRIBUTE	SVR-Device-Model-Number				18	string
+ATTRIBUTE   SVR-Lat-Long				19  string
+ATTRIBUTE   SVR-Venue-Category			20  integer
+ATTRIBUTE	SVR-Network-Type			21  integer
+
+END-VENDOR	Syniverse

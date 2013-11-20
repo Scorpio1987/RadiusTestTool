@@ -1,0 +1,12 @@
+
+
+VENDOR		Atrica				6110
+
+BEGIN-VENDOR	Atrica
+
+ATTRIBUTE	Atrica-Access-Level	1	integer
+VALUE Atrica-Access-Level   Admin               1
+VALUE Atrica-Access-Level   Read-Write          2
+VALUE Atrica-Access-Level   Read-Only           3                   
+
+END-VENDOR	Atrica

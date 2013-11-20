@@ -1,0 +1,28 @@
+2013-11-20 10:58:11,599: DEBUG: Starting the client for the user username28@airborne.aircell.com to the server localhost
+
+2013-11-20 10:58:11,601: DEBUG: DURATION of the TEST: 21
+2013-11-20 10:58:11,603: DEBUG: NAS-IP: 10.254.23.1
+2013-11-20 10:58:11,605: DEBUG: NAS-MAC-ADDR: 16:21:31:41:51:78
+2013-11-20 10:58:11,606: DEBUG: Abruptly End: False
+2013-11-20 10:58:11,608: DEBUG: Framed-IP: 10.254.23.167
+2013-11-20 10:58:11,609: DEBUG: User-MAC-Addr: 00:16:3E:40:6E:C4
+2013-11-20 10:58:11,612: DEBUG: 
+
+2013-11-20 10:58:11,612: DEBUG: Creating Authentication Request with the following Attributes:
+2013-11-20 10:58:11,613: DEBUG: NAS-Identifier: [u'C08386']
+2013-11-20 10:58:11,614: DEBUG: User-Name: [u'username28@airborne.aircell.com']
+2013-11-20 10:58:11,616: DEBUG: NAS-IP-Address: ['10.254.23.1']
+2013-11-20 10:58:11,618: DEBUG: Service-Type: ['Authenticate-Only']
+2013-11-20 10:58:11,619: DEBUG: Proxy-State: ['3237,3134']
+2013-11-20 10:58:11,621: DEBUG: Framed-IP-Address: ['10.254.23.167']
+2013-11-20 10:58:11,622: DEBUG: GoGo-Airline: [u'BA01']
+2013-11-20 10:58:11,623: DEBUG: Acct-Session-Id: [u'AAATestNAS_18-1384925291612-00163E406EC4-3']
+2013-11-20 10:58:11,623: DEBUG: GoGo-Tail-Number: [u'AAATestNAS_18']
+2013-11-20 10:58:11,624: DEBUG: GoGo-Private-IP-Address: ['192.168.1.179']
+2013-11-20 10:58:11,625: DEBUG: WISPr-Location-ID: [u'airline=BA01,tail=01009,network=']
+2013-11-20 10:58:11,626: DEBUG: WISPr-Location-Name: [u'TEST LLC,BA01_01009']
+2013-11-20 10:58:11,626: DEBUG: NAS-Port-Type: ['Wireless-802.11']
+2013-11-20 10:58:11,628: DEBUG: Called-Station-Id: [u'00:16:3E:40:6E:C4']
+2013-11-20 10:58:11,629: DEBUG: Calling-Station-Id: [u'16:21:31:41:51:78']
+2013-11-20 10:58:11,632: ERROR: Network error, Reason: 'Network error: Too many open files'
+2013-11-20 10:58:11,633: DEBUG: Ending the test for this user

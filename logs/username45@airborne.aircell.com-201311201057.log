@@ -1,0 +1,28 @@
+2013-11-20 10:57:31,530: DEBUG: Starting the client for the user username45@airborne.aircell.com to the server localhost
+
+2013-11-20 10:57:31,531: DEBUG: DURATION of the TEST: 59
+2013-11-20 10:57:31,532: DEBUG: NAS-IP: 10.254.249.1
+2013-11-20 10:57:31,533: DEBUG: NAS-MAC-ADDR: 19:21:31:41:52:26
+2013-11-20 10:57:31,534: DEBUG: Abruptly End: False
+2013-11-20 10:57:31,536: DEBUG: Framed-IP: 10.254.249.149
+2013-11-20 10:57:31,536: DEBUG: User-MAC-Addr: 00:16:3E:27:CD:E9
+2013-11-20 10:57:31,538: DEBUG: 
+
+2013-11-20 10:57:31,539: DEBUG: Creating Authentication Request with the following Attributes:
+2013-11-20 10:57:31,540: DEBUG: NAS-Identifier: [u'C08386']
+2013-11-20 10:57:31,541: DEBUG: User-Name: [u'username45@airborne.aircell.com']
+2013-11-20 10:57:31,542: DEBUG: NAS-IP-Address: ['10.254.249.1']
+2013-11-20 10:57:31,542: DEBUG: Service-Type: ['Authenticate-Only']
+2013-11-20 10:57:31,543: DEBUG: Proxy-State: ['3237,3134']
+2013-11-20 10:57:31,544: DEBUG: Framed-IP-Address: ['10.254.249.149']
+2013-11-20 10:57:31,545: DEBUG: GoGo-Airline: [u'BA01']
+2013-11-20 10:57:31,545: DEBUG: Acct-Session-Id: [u'AAATestNAS_244-1384925251539-00163E27CDE9-2']
+2013-11-20 10:57:31,546: DEBUG: GoGo-Tail-Number: [u'AAATestNAS_244']
+2013-11-20 10:57:31,546: DEBUG: GoGo-Private-IP-Address: ['192.168.1.179']
+2013-11-20 10:57:31,547: DEBUG: WISPr-Location-ID: [u'airline=BA01,tail=01009,network=']
+2013-11-20 10:57:31,547: DEBUG: WISPr-Location-Name: [u'TEST LLC,BA01_01009']
+2013-11-20 10:57:31,548: DEBUG: NAS-Port-Type: ['Wireless-802.11']
+2013-11-20 10:57:31,548: DEBUG: Called-Station-Id: [u'00:16:3E:27:CD:E9']
+2013-11-20 10:57:31,549: DEBUG: Calling-Station-Id: [u'19:21:31:41:52:26']
+2013-11-20 10:57:31,550: ERROR: Network error, Reason: 'Network error: nodename nor servname provided, or not known'
+2013-11-20 10:57:31,550: DEBUG: Ending the test for this user

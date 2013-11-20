@@ -1,0 +1,11 @@
+
+
+VENDOR		Telesyn				7000
+
+BEGIN-VENDOR	Telesyn
+
+ATTRIBUTE	Telesyn-Access-Level	1	integer
+VALUE	Telesyn-Access-Level	Administrative	6
+VALUE	Telesyn-Access-Level	NAS-Prompt	2	                   
+
+END-VENDOR	Telesyn
